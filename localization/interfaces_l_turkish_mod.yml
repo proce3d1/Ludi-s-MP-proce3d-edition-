@@ -1,0 +1,8 @@
+﻿l_turkish:
+ MILITARY_FORMATION_GENERALS: "#v Generaller #!"
+ MILITARY_FORMATION_ADMIRALS: "#v Amiraller #!"
+ 
+ MILITARY_FORMATION_SUM_OF_TOTAL_COMMANDERS: "#v [GetDataModelSize( MilitaryFormation.GetCommanders )]#!/[GetDefine('NMilitary','MAX_NUM_COMMANDERS_PER_FORMATION')]"
+ 
+ RAISE_ALL_CONSCRIPTS_MOD: "Askere çağırmak"
+ 

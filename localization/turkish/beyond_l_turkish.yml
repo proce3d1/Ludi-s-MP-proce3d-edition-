@@ -1,0 +1,4 @@
+﻿l_turkish:
+ MARKET_BALANCE_MMP:0 "#title Bilanço:#variable @money![Market.GetBalance|D+=]#!#!"
+ 
+ POOL_BALANCE_MMP:0 "#title Yatırım Havuzu:#variable @money![GetPlayer.GetInvestmentIncome|D+=]#!#!"

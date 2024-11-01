@@ -1,0 +1,19 @@
+﻿l_korean:
+SaveCPU_decision:0 "Save your CPU"
+SaveCPU_decision_desc:0 "전 세계 각 국가들의 팝을 해당 국가의 대표 문화와 종교로 통합합니다."
+
+SaveCPU_event.1.t:0 "Save your CPU"
+SaveCPU_event.1.t.d:1 "이건 전부 패독사 탓입니다..."
+SaveCPU_event.1.f:0 "모든 팝들을 대표 문화와 종교로 통합시켜 게임 렉을 최소화 하실 분만 누르세요."
+
+SaveCPU_event.1.all:0 "모든 팝 통합"
+SaveCPU_event.1.all.tt:1 "모든 팝들이 대표 문화와 종교로 통합됩니다."
+SaveCPU_event.1.limit:0 "제한된 팝 통합"
+SaveCPU_event.1.limit.tt:1 "All assimilations/conversions in progress are immediately completed in their entirety."
+
+SaveCPU_event.1.x:0 "아무 것도 하지 않음"
+SaveCPU_event.1.x.tt:1 "계속해서 고통받는 CPU를 보고 싶으시다면..."
+
+
+notification_SaveCPU_notification_name:1 "통합 완료!"
+notification_SaveCPU_notification_desc:1 "팝들이 통합되었습니다."

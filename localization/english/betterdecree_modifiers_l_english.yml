@@ -1,0 +1,9 @@
+﻿l_english:
+
+building_group_bg_monuments_throughput_add:0 "Monuments [concept_throughput]"
+building_group_bg_canals_throughput_add:0 "Canals [concept_throughput]"
+
+
+
+building_group_bg_monuments_throughput_add_desc:0 "A bonus or penalty to both input and output of Monuments"
+building_group_bg_canals_throughput_add_desc:0 "A bonus or penalty to both input and output of Canals"

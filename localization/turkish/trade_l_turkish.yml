@@ -1,0 +1,4 @@
+﻿l_turkish:
+ AUTOMATE_TRADE_BUTTON:0 "#header Ticareti Otomatikleştirin #!\n$TOOLTIP_DELIMITER$\nTicaret otomasyonunu etkinleştirmek/devre dışı bırakmak için tıklayın.\n\nŞu anda: [GetPlayer.GetCustom('autotradestatus')]\n\n#bold Not: Sistem yalnızca ticaret oluşturabilir rotalar ancak motor sınırlamaları nedeniyle kaldırılamaz.#!"
+ autotradeenabled:0 "#green #bold ETKİN#!#!"
+ autotradedisabled:0 "#red #bold DEVRE DIŞI#!#!"

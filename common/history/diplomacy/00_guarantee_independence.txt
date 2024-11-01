@@ -1,0 +1,21 @@
+﻿DIPLOMACY = {
+	c:GBR ?= {
+		create_diplomatic_pact = {
+			country = c:BEL
+			type = guarantee_independence
+		}
+	}
+	c:FRA ?= {
+		create_diplomatic_pact = {
+			country = c:BEL
+			type = guarantee_independence
+		}	
+	}
+	c:AUS ?= {
+		create_diplomatic_pact = {
+			country = c:SIC
+			type = guarantee_independence
+		}
+			
+	}		
+}

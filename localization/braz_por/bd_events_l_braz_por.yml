@@ -1,0 +1,75 @@
+﻿l_braz_por:
+
+#Greener Grass mass migration
+
+bd_events.1.t:0 "Propagandistas Bem-Sucedidos"
+bd_events.1.d:0 "Os esforços de propaganda dos [GetInterestGroupVariant('ig_intelligentsia',GetPlayer).GetNameWithCountryVariant] em [SCOPE.sState('bd_gg_migration_target_state').GetStateRegion.GetName] para aumentar [concept_migration_pull] revelaram uma oportunidade de criar um [concept_migration_target] para [SCOPE.sCulture('bd_gg_migration_culture').GetName]#yellow s#! de [SCOPE.sCountry('bd_gg_migration_country').GetName] se subsidiarmos o transporte deles."
+bd_events.1.f:0 ""Sozinhos entre todas as nações da Terra, parecem estar livres da síndrome do 'A grama é mais verde do outro lado da cerca' e proclamam enfaticamente que [ROOT.GetCountry.GetNameNoFormatting] é, de fato, o outro lado dessa cerca.""
+bd_events.1.a:0 "Bem-vindos, [SCOPE.sCulture('bd_gg_migration_culture').GetNameNoFormatting]s!"
+bd_events.1.b:0 "O custo é proibitivo."
+bd_funding_mass_migration:0 "Financiamento de Migração em Massa"
+
+#HOMELAND EVENTS
+decree_homeland_removal: "Nossa Pátria!"
+decree_homeland_removal_desc: "Converta lentamente um estado em uma pátria nacional."
+homeland_decree.tt: "É pátria de uma cultura estrangeira."
+homeland_decree.tt2: "Tem pelo menos 1 cultura primária no estado."
+
+homeland_improvement.tt: "O progresso para tornar a pátria será aumentado"
+remove_homeland_events.1.t:0 "Nossa Pátria"
+remove_homeland_events.1.d:0 "Uma união entre nosso povo não é apenas possível, mas uma realidade. Todos os cidadãos de [ROOT.GetState.GetCountry.GetName] estão agora unidos sob a mesma bandeira, o mesmo estandarte."
+remove_homeland_events.1.f:1 ""As lendas antigas do passado em breve encontrarão seu equivalente em nossas próprias novas lendas. Nossos heróis nacionais agora nos contemplam com um sorriso. Nossa língua, nossa cultura, tudo que nos une, filhos e filhas de uma ancestralidade comum, finalmente a honraremos.""
+remove_homeland_events.1.a:0 "Nossa nação, nossa cultura!"
+
+remove_homeland_events.4.d: "Uma comissão foi enviada ao prestigioso [SCOPE.sBuilding('decree_building').GetName] de [SCOPE.sState('decree_state').GetName] para obter um dos seus melhores compositores para escrever uma ópera nacional que capture a grandiosidade de [ROOT.GetState.GetCountry.GetName]."
+remove_homeland_events.4.f: ""Mesmo os críticos mais severos não serão capazes de encontrar um único defeito na harmonia, na escala, no ritmo da minha ópera magna, [SCOPE.GetRootScope.GetState.GetCountry.GetCustom('opera_noun')] [SCOPE.GetRootScope.GetState.GetCountry.GetCustom('opera_genitive')]. Uma história sobre amor, morte, tópicos imortais que dizem respeito às lendas de [ROOT.GetState.GetCountry.GetName], seus heróis serão lembrados para sempre graças a estas magníficas árias!""
+remove_homeland_events.4.b: "Não é uma oferta muito interessante."
+
+remove_homeland_events.5.t: "Distorcendo a História"
+remove_homeland_events.5.d: "Um investimento em pesquisa foi solicitado pelo [SCOPE.sBuilding('decree_building').GetName] em [SCOPE.sState('decree_state').GetName]. [SCOPE.sCulture('discriminated_culture').GetName] pertence historicamente à cultura de [ROOT.GetState.GetOwner.GetName]."
+remove_homeland_events.5.f: ""Originalmente [SCOPE.sCulture('discriminated_culture').GetName] é uma cultura de uma raiz que diverge de [ROOT.GetState.GetOwner.GetName]. Gostaríamos de criar uma equipe de pesquisa histórica para descobrir este fato axiomático."
+remove_homeland_events.5.a: "Essa é uma boa ideia!"
+remove_homeland_events.5.b: "Será que essa mentira funcionaria?"
+
+remove_homeland_events.6.t: "Ataque Terrorista à Equipe de Pesquisa Histórica"
+remove_homeland_events.6.d: "Um grupo de pesquisadores investigando a história de [SCOPE.sCulture('discriminated_culture').GetName] foi atacado por terroristas radicais. Os terroristas estão exigindo o fim da pesquisa histórica, e se não, o terror continuará para sempre."
+remove_homeland_events.6.f: ""A cultura de [SCOPE.sCulture('discriminated_culture').GetName] é nossa! Não pertence a mais ninguém! [ROOT.GetState.GetOwner.GetName] deveria parar de distorcer a história imediatamente!""
+remove_homeland_events.6.a: "Sem negociações com terroristas."
+remove_homeland_events.6.b: "É melhor parar de pesquisar."
+
+remove_homeland_events.7.d: "[SCOPE.sCulture('discriminated_culture').GetName] estudantes às vezes usam sua língua nativa nas escolas de [ROOT.GetCountry.GetAdjectiveNoFormatting]. Alguns pediram para que os professores penalizem o uso dessas línguas, forçando as crianças a falarem a língua oficial de [ROOT.GetState.GetCountry.GetName]."
+
+remove_homeland_events.8.d: "Fábricas em [SCOPE.sState('discrimination_state').GetName] estão se recusando a contratar pessoas de [SCOPE.sCulture('discriminated_culture_pop').GetName], devido ao seu status de cidadãos de segunda classe em [ROOT.GetState.GetCountry.GetName]."
+remove_homeland_events.8.a: "Se você quiser trabalhar em nossa fábrica, você tem que seguir nossa cultura."
+
+
+```
+remove_homeland_events.9.t: "Mais Migração"
+remove_homeland_events.9.d: "À medida que nosso esforço para criar uma pátria em [ROOT.GetState.GetName] avançava, a necessidade de migrantes aumentava. Os residentes se opõem aos novos migrantes, mas há poucas alternativas."
+remove_homeland_events.9.f: ""A cultura de [SCOPE.sCulture('discriminated_culture').GetName] merece respeito. Nossa bela cultura não deveria ser destruída pela entrada de estrangeiros?"
+remove_homeland_events.9.a: "É apenas uma pequena rebelião."
+remove_homeland_events.9.b: "Eles têm um ponto."
+
+remove_homeland_events.10.t: "Mestiçagem"
+remove_homeland_events.10.d: "Recentemente, à medida que os habitantes de [ROOT.GetState.GetName] de diferentes culturas se misturaram, pessoas de sangue misto também estão nascendo. Algumas pessoas de [ROOT.GetState.GetName] [SCOPE.sBuilding('decree_building').GetName] argumentam que isso deveria ser interrompido."
+remove_homeland_events.10.f: ""A heterogeneidade cultural de [ROOT.GetState.GetOwner.GetName] e [SCOPE.sCulture('discriminated_culture').GetName] não é algo que possa ser facilmente superado. Tenho medo do caos que sua raça mista trará para nossa sociedade."
+remove_homeland_events.10.a: "Bem, eu acho que deveria ser recomendado."
+remove_homeland_events.10.b: "Devo considerar isso."
+
+remove_homeland_events.11.t: "Segregação Cultural"
+remove_homeland_events.11.d: "Os conflitos culturais entre [ROOT.GetState.GetName] estão se tornando extensos e sua relação está piorando. Intelectuais de [ROOT.GetState.GetName] [SCOPE.sBuilding('decree_building').GetName] sugeriram implementar a segregação cultural como solução."
+remove_homeland_events.11.f: ""[SCOPE.sCulture('discriminated_culture').GetName] e [ROOT.GetState.GetOwner.GetName] têm culturas diferentes. Não é que sua cultura seja inferior, eles apenas são diferentes de nós. Portanto, é bom reduzir o atrito entre si através dessa nobre segregação."
+remove_homeland_events.11.a: "Devemos viver juntos. A segregação nunca pode estar em nossa sociedade."
+remove_homeland_events.11.b: "Está certo."
+
+remove_homeland_events.12.t: "Esportes em Grupo"
+remove_homeland_events.12.d: "À medida que os esportes em grupo se tornavam populares em [ROOT.GetState.GetName] [SCOPE.sBuilding('decree_building').GetName], os residentes de [SCOPE.sCulture('discriminated_culture').GetName] estão começando a sair mais frequentemente com o exército. Algumas pessoas até sugeriram que deveria haver jogos regulares."
+remove_homeland_events.12.f: ""Não importa como alguém se parece ou diz, o que importa! Desde que você jogue bem, está tudo bem! Ei lá! Me dê essa bola rapidamente!""
+remove_homeland_events.12.a: "Melhore um pouco o parque."
+remove_homeland_events.12.b: "Os soldados devem ser fiéis ao seu trabalho."
+
+remove_homeland_events.13.t: "Festival"
+remove_homeland_events.13.d: "Foi relatado que os agricultores de [ROOT.GetState.GetName] [SCOPE.sBuilding('decree_building').GetName] se reuniram para um grande festival. Entre eles, uma imagem de [SCOPE.sCulture('discriminated_culture').GetName] e pessoas de [ROOT.GetState.GetCountry.GetName] se abraçando juntas se espalhou e se tornou um tópico."
+remove_homeland_events.13.f: ""Às vezes brigávamos e às vezes ficávamos com raiva. Às vezes estávamos tristes, às vezes estávamos com dor. Mas hoje, espero que possamos esquecer tudo e apenas rir e aproveitar a festa. Se você é do povo de [ROOT.GetState.GetCountry.GetName], vamos comer, beber e dançar!""
+remove_homeland_events.13.a: "Dê-lhes algum apoio para que possam celebrar com frequência."
+remove_homeland_events.13.b: "Não temos tempo para um negócio tão pequeno."

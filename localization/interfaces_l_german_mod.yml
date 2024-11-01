@@ -1,0 +1,8 @@
+﻿l_german:
+ MILITARY_FORMATION_GENERALS: "#v Generäle #!"
+ MILITARY_FORMATION_ADMIRALS: "#v Admiräle #!"
+ 
+ MILITARY_FORMATION_SUM_OF_TOTAL_COMMANDERS: "#v [GetDataModelSize( MilitaryFormation.GetCommanders )]#!/[GetDefine('NMilitary','MAX_NUM_COMMANDERS_PER_FORMATION')]"
+ 
+ RAISE_ALL_CONSCRIPTS_MOD: "Einberufen"
+ 

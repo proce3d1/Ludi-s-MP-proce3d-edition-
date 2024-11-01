@@ -1,0 +1,4 @@
+﻿l_japanese:
+ AUTOMATE_TRADE_BUTTON:0 "#header Automate Trade #!\n$TOOLTIP_DELIMITER$\nClick to enable/disable trade automation.\n\nCurrently: [GetPlayer.GetCustom('autotradestatus')]\n\n#bold Note: The system can only create trade routes but cannot remove them due to engine limitations.#!"
+ autotradeenabled:0 "#green #bold ENABLED#!#!"
+ autotradedisabled:0 "#red #bold DISABLED#!#!"

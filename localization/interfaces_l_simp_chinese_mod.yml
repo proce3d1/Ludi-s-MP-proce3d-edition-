@@ -1,0 +1,8 @@
+﻿l_simp_chinese:
+ MILITARY_FORMATION_GENERALS: "#v 将军 #!"
+ MILITARY_FORMATION_ADMIRALS: "#v 海军上将 #!"
+ 
+ MILITARY_FORMATION_SUM_OF_TOTAL_COMMANDERS: "#v [GetDataModelSize( MilitaryFormation.GetCommanders )]#!/[GetDefine('NMilitary','MAX_NUM_COMMANDERS_PER_FORMATION')]"
+ 
+ RAISE_ALL_CONSCRIPTS_MOD: "征召入伍"
+ 

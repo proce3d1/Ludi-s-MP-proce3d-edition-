@@ -1,0 +1,106 @@
+
+NPolitics = {
+	LAW_ENACTMENT_MIN_TOTAL_DAYS = 14			# Vanilla = 1, Minimum number of total days that an enactment checkpoint can take [>=1]
+	LAW_ENACTMENT_DEFAULT_BASE_DAYS = 90		# Vanilla = 100, Default number of base days required to reach an enactment checkpoint [>=1]
+	LAW_ENACTMENT_COOLDOWN_DAYS = 456			# Vanilla = 730, When an enactment fails, or is manually stopped after at least one checkpoint, that law can't be tried to be enacted for this many days [>=0]
+	
+}
+
+NEconomy = {
+	MIN_CONSTRUCTION_EFFICIENCY = 0.15			# Vanilla = 0.05; Construction efficiency cannot go below this amount
+	
+	DECLARE_BANKRUPTCY_PENALTY_DURATION_YEARS = 5	# 10		# How many years does it take for penalties from declaring bankruptcy to fully decay
+
+	GOODS_LEADERBOARD_SIZE = 20					# How many spots there are on each goods leaderboard, default: 10
+
+		
+	BUILDING_RAISE_WAGES_MIN_RELEVANT_POP_SIZE = 50 # Pops with less workforce than this are ignored when checking whether a profitable building should raise wages because of radicalizing workers
+	BUILDING_RAISE_WAGES_DISCRIMINATION_FACTOR = 0.75	# 0.66 # Profitable buildings only care to raise wages for discriminated pops if their wealth to expected SoL ratio is less than this
+	BUILDING_LOWER_WAGES_TARGET_WEALTH_MULT = 1.5	# 1.33 # Buildings will consider lowering wages if all significant pops working in them have this * the target wealth to expected SoL ratio
+	BUILDING_DEFAULT_MIN_EARNINGS_TO_HIRE_EMPLOYEES = 3  # Non-subsidized buildings will not hire if it would result in their annual earnings/employee falling below this threshold
+	BUILDING_PROFIT_TARGET_TO_RAISE_WAGES = 0.25	# 0.3		# Required profit margin to consider raising wages for SoL or employment reasons, with BUILDING_WEEKS_BETWEEN_PAY_CHANGES weeks cooldown
+	BUILDING_PROFIT_TARGET_TO_LOWER_WAGES = 0.1	# 0.15	# If profit margin is this or below, consider lowering wages for SoL or employment reasons, with BUILDING_WEEKS_BETWEEN_PAY_CHANGES weeks cooldown
+	BUILDING_MAX_EMPLOYMENT_FRACTION_TO_RAISE_WAGES = 0.9	# 0.5 # If the employment fraction of a building is above this, don't raise wages just to try and snipe employees from other buildings
+	COMPANY_PRODUCTIVITY_RATIO_HIGH_THRESHOLD = 1.2	# 1.25		# Companies whose productivity exceeds this factor of the global average will be considered high-productivity companies
+	COMPANY_PRODUCTIVITY_RATIO_LOW_THRESHOLD = 0.8	# 0.75		# Companies whose productivity is below this factor of the global average will be considered low-productivity companies
+
+}
+	
+
+NDiplomacy = {
+
+
+	DEFAULT_TRUCE_MONTHS = 60
+	PEACE_DEAL_DURATION_IN_DAYS = 30
+	PEACE_DEAL_COOLDOWN_IN_DAYS = 60	# 120
+	PACT_REQUIRES_APPROVAL_MIN_FORCED_MONTHS = 1 		# Diplomatic pacts that require approval always have at least this cooldown period before they can be broken
+	OBLIGATION_FORCED_PACT_MONTHS = 60	# 120
+	SWAY_FORCED_PACT_MONTHS = 120
+	EXPEL_DIPLOMATS_MONTHS = 24			# 60
+	OBLIGATION_MONTHS = 60				# 120
+
+	MAKE_WARGOAL_PRIMARY_DEMAND_MANEUVERS_COST = 0.2 			#0.5 Fraction of the wargoal's base maneuver cost that it costs to turn it into a primary demand
+	MAKE_WARGOAL_PRIMARY_DEMAND_INFAMY_AMOUNT = 0.2				#0.5 Fraction of the wargoal's base infamy that is accured when you turn it into a primary demand
+		
+	PRESTIGE_FROM_COUNTRY_GDP_DIVISOR = 1000000
+	PRESTIGE_FROM_COUNTRY_GDP = 6							# 3 # Per PRESTIGE_FROM_COUNTRY_GDP_DIVISOR GDP
+	PRESTIGE_FROM_SUBJECT_GDP = 0.5							# 1.5 # Per PRESTIGE_FROM_COUNTRY_GDP_DIVISOR GDP in subjects
+	PRESTIGE_FROM_ARMY_POWER_PROJECTION = 0.03 				# Per point of power projection from army combat power
+	PRESTIGE_FROM_NAVY_POWER_PROJECTION = 0.066				# 0.10 # Per point of power projection from navy combat power
+	PRESTIGE_FROM_SUBJECT_ARMY_POWER_PROJECTION = 0.0005 	# Per point of power projection from army combat power in subjects
+	PRESTIGE_FROM_SUBJECT_NAVY_POWER_PROJECTION = 0.005 	# 0.01 # Per point of power projection from navy combat power in subjects
+	PRESTIGE_MIN_NUM_COUNTRIES = 100 # If there's less countries using prestige than this in the game, we add some filler countries to adjust average prestige levels
+	FILLER_COUNTRY_PRESTIGE = 15
+	
+}
+
+
+NPops = {
+
+	JOB_SATISFACTION_BASE = -130							# Base job satisfaction
+	JOB_SATISFACTION_FOR_NEWLY_HIRED = 1000					# Job satisfaction gained due to having been newly hired, this state lasts until the pop's next wealth calculation
+	JOB_SATISFACTION_PER_SOL_ABOVE_EXPECTED_SOL = 3			# Job satisfaction gained per level of SoL above your expected SoL
+	JOB_SATISFACTION_PER_SOL_ABOVE_STATE_STRATA_SOL = 2		# Job satisfaction gained per level of SoL above the state average for your strata
+	JOB_SATISFACTION_PER_SOL_ABOVE_COUNTRY_STRATA_SOL = 1	# Job satisfaction gained per level of SoL above the country average for your strata
+	JOB_SATISFACTION_PER_PERCENT_WAGE_RATE_ABOVE_NORMAL = 1	# Job satisfaction gained per pound of workplace wage rate (weekly wage of 10k laborers) above country normal
+	JOB_SATISFACTION_FROM_CAN_AFFORD_EXPENSES = 1000		# Job satisfaction gained from being able to afford your bug package (and taxes)
+	JOB_SATISFACTION_FROM_CANNOT_AFFORD_EXPENSES = -100		# Job satisfaction gained from not being able to afford your bug package (and taxes)
+	JOB_SATISFACTION_PER_PERCENT_HIGHER_STRATA_QUALIFICATION = -2	# -1 # Job satisfaction gained per percent of workforce qualified for a higher strata. Note that qualifications are assumed to overlap and the largest qualification is used in this calculation
+	JOB_SATISFACTION_FROM_EMPLOYMENT = 100					# Job satisfaction gained from having a job
+	JOB_SATISFACTION_DIVIDENDS_MAX_MULT = 2.5	# 5					# Max multiplier from the ratio between pop dividends and wages
+	JOB_SATISFACTION_DIVIDENDS_BASE = 20	# 50					# Base value to be multiplied by the ratio between dividends and wages
+	JOB_SATISFACTION_LOSSES_MIN_MULT = -5					# Min multiplier from the ratio between pop losses and wages (or if you will, max magnitude)
+	JOB_SATISFACTION_LOSSES_BASE = 50						# Base value to be multiplied by the ratio between losses and wages 
+
+}
+
+NBattle = {	
+	CHANCE_OF_POPULARITY_NARROW_VICTORY = 0.75 #0.5	# The chance (0-1) to be affected by popularity for a narrow victory (start with numeric advantage, end with numeric disadvantage)
+	CHANCE_OF_POPULARITY_NORMAL_VICTORY	= 0.33 #0.1	# The chance (0-1) to be affected by popularity for a normal victory (any victory that's not narrow or heroic)
+	CHANCE_OF_POPULARITY_HEROIC_VICTORY	= 1.0		# The chance (0-1) to be affected by popularity for a heroic victory (start with numeric disadvantage against a more prestigious nation)
+	POPULARITY_GAIN_NARROW_VICTORY = 3 			# Multiple of commander_battle_end_victory modifier the winner should get for a narrow victory if the random chance roll is true
+	POPULARITY_GAIN_NORMAL_VICTORY = 2			# Multiple of commander_battle_end_victory modifier the winner should get for a normal victory if the random chance roll is true
+	POPULARITY_GAIN_HEROIC_VICTORY = 5 			# Multiple of commander_battle_end_victory modifier the winner should get for a heroic victory if the random chance roll is true
+	POPULARITY_GAIN_NARROW_LOSS	= -3			# Multiple of commander_battle_end_loss modifier the loser should get for a narrow victory for the other side if the random chance roll is true
+	POPULARITY_GAIN_NORMAL_LOSS	= -2			# Multiple of commander_battle_end_loss modifier the loser should get for a normal victory for the other side if the random chance roll is true
+	POPULARITY_GAIN_HEROIC_LOSS = -5			# Multiple of commander_battle_end_loss modifier the loser should get for a heroic victory for the other side if the random chance roll is true
+	POPULARITY_DECAY_MONTHS = 120	#600 #60				# The number of months battle popularity modifiers decay over
+}
+
+NWar = {
+	OCCUPATION_STATE_DEFENSIVE_BATTLE_VICTORY_SCORE = 25	# 100 	# How many occupation "points" each country receives after winning a defensive battle
+	OCCUPATION_STATE_CLEAR_OCCUPATION_FRACTION = 0.5 # Fraction of occupation score dedicated to clear occupation from your own States (if any).
+																																				 
+	STATE_CONQUEST_DEFAULT_RADICALIZATION = 0.4			# 0.5
+	STATE_CONQUEST_DEFAULT_DEMILITARIZATION = 0.6			# 0.75
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,349 @@
+﻿l_english:
+
+ #####
+ # Goods
+ #####
+
+ tts_manowars: "Men-o-war"
+ tts_warships: "Warships"
+ tts_capital_ships: "Capital Ships"
+
+######
+# Buildings
+######
+
+ building_battleship_import_office: "Battleship Import Office"
+ building_naval_yards: "Naval Yards"
+
+ ######
+ # Production Methods
+ #####
+
+ # Shipyard
+ pm_tts_basic_shipbuilding: "Wooden Ships"
+ pm_tts_complex_shipbuilding: "Reinforced Wooden Ships"
+ pm_tts_reduced_metal_shipbuilding: "Small-scale Steam Ships"
+ pm_tts_metal_shipbuilding: "Steam Ships"
+ pm_tts_arc_welding_shipbuilding: "Arc-Welded Ships"
+
+ pm_tts_no_military_shipbuilding: "No Military Shipbuilding"
+ pm_tts_military_shipbuilding_wooden: "Man-o-Wars"
+ pm_tts_military_shipbuilding_reinforced_wooden: "Screw Frigates"
+ pm_tts_military_shipbuilding_ironclad: "Ironclads"
+ pm_tts_military_shipbuilding_steel: "Steel-Hulled Ships"
+ pm_tts_military_shipbuilding_turbine: "Turbine-Powered Ships"
+ pm_tts_military_shipbuilding_arc_welding_ironclad: "Arc-Welded Ironclads"
+
+ pmg_ownership_capital_building_navy_yards: "Ownership"
+ pm_merchant_guilds_building_naval_yards: "Merchant Guilds"
+ pm_privately_owned_building_naval_yards: "Privately Owned"
+ pm_publicly_traded_building_naval_yards: "Publicly Traded"
+ pm_government_run_building_naval_yards: "Government Run"
+ pm_worker_cooperative_building_naval_yards: "Worker Cooperative"
+
+ # Naval Base
+ pm_tts_ships_of_the_line: "Ships of the Line"
+ pm_tts_steam_ships_of_the_line: "Steam Ships of the Line"
+ pm_tts_ironclads: "Ironclads"
+ pm_tts_predreadnoughts: "Pre-Dreadnoughts"
+ pm_tts_dreadnoughts: "Dreadnoughts"
+ pm_tts_battleships: "Battleships"
+ pm_tts_commerce_raider: "Commerce Raiders"
+ pm_tts_torpedo_boat: "Torpedo Boats"
+ pm_tts_submarine: "Submarines"
+ pm_tts_frigates: "Frigates"
+ pm_tts_destroyers: "Destroyers"
+ pm_tts_carriers: "Aircraft Carriers"
+
+ # Misc
+ pmg_battleship_import: "Imports"
+ pm_battleship_import: "Battleship Imports"
+
+######
+# Modifiers
+######
+ 
+ relaxed_safety_procedures: "Relaxed Safety Procedures"
+ exploding_ships: "Exploding Ships"
+ cheating_the_treaty: "Cheating the Treaty"
+ funding_great_eastern: "Funding the Great Eastern"
+ developing_predreadnoughts: "Developing Pre-Dreadnoughts"
+ developing_dreadnoughts: "Developing Dreadnoughts"
+ developing_battleships: "Developing Battleships"
+ naval_innovations: "Naval Innovations"
+ naval_innovations_predreadnoughts: "Naval Innovations"
+ naval_innovations_dreadnoughts: "Naval Innovations"
+ naval_innovations_battleships: "Naval Innovations"
+ naval_innovations_tooltip: "This modifier will be removed once more powerful battleships are researched."
+ naval_innovator: "Naval Innovator"
+ developed_mahanian_thought: "Developed Mahanian Thought"
+ battleship_building_holiday: "Battleship Building Holiday"
+ naval_base_treaty_tooltip: "The country is not under a Battleship Building Holiday"
+ purchasing_battleships: "Purchasing Battleships"
+ receiving_payment_for_battleships: "Receiving Payment for Battleships"
+ great_white_fleet_modifier: "The Great White Fleet"
+ battleship_explosion_state: "Battleship Explosion"
+ battleship_explosion_building: "Battleship Explosion"
+ unstable_ship_sunk: "Unstable Ship Sunk"
+ high_navy_prof_modifier: "High Navy Professionalism"
+ medium_navy_prof_modifier: "Medium Navy Professionalism"
+ low_navy_prof_modifier: "Low Navy Professionalism"
+ very_low_navy_prof_modifier: "Very Low Navy Professionalism"
+ paying_for_naval_training: "Paying for Naval Training"
+ maintaining_current_navyprof: "Maintaining Navy Professionalism"
+ stopped_ruler_from_diverting_funds: "Stopped Ruler from Diverting Funds"
+ torpedo_juice: "Torpedo Juice"
+ laced_torpedo_juice: "Laced Torpedo Juice"
+ faulty_shells: "Faulty Shells"
+ relaxed_discipline: "Relaxed Discipline"
+ enforcing_harsh_discipline: "Enforcing Harsh Discipline"
+ replacing_defective_shells: "Replacing Defective Shells"
+ didnt_honor_admirals_favor: "Did Not Honor Admirals Favor"
+ navy_discipline_breakdown: "Navy Discipline Breakdown"
+ cracking_down_on_mutineers: "Cracking Down on Mutineers"
+ well_engineered_hulls: "Well-Engineered Hulls"
+ paying_for_naval_equipment: "Paying for Naval Equipment"
+ lacking_specialized_workers: "Lacking Specialized Workers"
+ paying_extra_for_shipyard_workers: "Paying Extra for Shipyard Workers"
+ restructuring_navy: "Restructuring Navy"
+
+# Opinion modifiers
+ meeting_two_power_standard: "Meeting Two-Power Standard"
+ not_meeting_two_power_standard: "Not Meeting Two-Power Standard"
+ rejected_two_power_standard: "Rejected Two-Power Standard"
+ abandoned_two_power_standard: "Abandoned Two-Power Standard"
+ denied_battleships: "Denied Battleships"
+ navy_concerns_ignored: "Navy Concerns Ignored"
+ navy_modernized: "Navy Modernized"
+ navy_left_behind: "Navy Left Behind"
+ let_our_naval_superiority_slip: "Let our Naval Superiority Slip"
+ ignored_advice_on_shipbuilding: "Ignored Advice on Shipbuilding"
+ purged_corrupt_officers: "Purged Corrupt Officers"
+ enforcing_discipline: "Enforcing Discipline"
+ accepted_revolter_demands: "Accepted Revolters Demands"
+ prosecuting_ammunition_thieves: "Prosecuting Ammunition Thieves"
+ refused_to_promote_admiral: "Refused to Promote Admiral"
+ renamed_battleships: "Renamed Battleships"
+ officer_purge: "Officer Purge"
+ officer_reshuffle: "Officer Reshuffle"
+ fired_admiral: "Fired Admiral"
+
+######
+# Laws
+######
+ lawgroup_naval_treaty: "Navy Restrictions"
+ law_no_naval_treaty: "Unrestricted Navy"
+ law_no_naval_treaty_desc: "The country is currently not bound by any navy limitations."
+ law_moderate_naval_treaty: "Moderate Naval Treaty"
+ law_moderate_naval_treaty_desc: "The country is under a moderate reduction of naval assets, as determined by a naval disarmament conference."
+ moderate_treaty_effect_tooltip: "Navies will be reduced to approximately three-quarters of the previous strength. They will also be prevented from expanding for five years."
+ law_extensive_naval_treaty: "Extensive Naval Treaty"
+ law_extensive_naval_treaty_desc: "There are significant limitations out under the country's navy, as a result of a naval disarmament conference"
+ extensive_treaty_effect_tooltip: "Navies will be reduced to approximately half of the previous strength. They will also be prevented from expanding for five years."
+ law_minimal_navy: "Minimal Navy"
+ law_minimal_navy_desc: "The country has a very small navy."
+
+######
+# Journal Entries
+######
+
+ je_naval_conference: "Naval Conference"
+ je_naval_conference_status: "You can hold a naval disarmament conference."
+ je_naval_conference_reason: "Recent developments in naval technology have led to increasingly high expenses. We might want to try to limit naval expansion, lest we fall into a costly arms race."
+ custom_loc_naval_conference_ongoing: "A naval conference is currently in progress. We shall wait for the results."
+ custom_loc_naval_conference_not_started: "You can start a naval conference by selecting the decision in the decision tab."
+ je_naval_conference_complete: "The conference is over."
+
+ je_two_power_standard: "The Two-Power Standard"
+ je_two_power_standard_met: "We are currently #BOLD meeting #!the Two-Power Standard"
+ je_two_power_standard_not_met: "We are currently NOT meeting the Two-Power Standard"
+ je_two_power_standard_reason: "We currently have a navy size of #BOLD [GetGlobalVariable('gbr_navy_size').GetValue|0]#!, and the two largest [Concept('concept_great_power', '$concept_great_powers$')] have a combined navy size of #BOLD [GetGlobalVariable('sum_two_powers').GetValue|0]#!."
+ je_two_power_standard_fail: "We give up on the Standard."
+
+ je_south_american_dreadnoughts: "The South American Dreadnought Race"
+ je_south_american_dreadnoughts_status: "TODO"
+ je_south_american_dreadnoughts_reason: "TODO"
+
+ je_predreadnought_tech: "Developing Pre-Dreadnoughts"
+ je_predreadnought_tech_reason: "We are developing new shipbuilding techniques, which will be used in the construction of Pre-Dreadnought battleships.\nOur current level of Naval Innovation is #b #gold [ROOT.GetCountry.MakeScope.Var('naval_innovations').GetValue|0]#!#!. This will result in an increase of combat ability by #b #gold [ROOT.GetCountry.MakeScope.Var('naval_innovations').GetValue|0]%#!#! once research is finished."
+ je_predreadnought_tech_goal: "Research is finished"
+
+ je_dreadnought_tech: "Developing Dreadnoughts"
+ je_dreadnought_tech_reason: "We are developing new shipbuilding techniques, which will be used in the construction of Dreadnought battleships.\nOur current level of Naval Innovation is #b #gold [ROOT.GetCountry.MakeScope.Var('naval_innovations').GetValue|0]#!#!. This will result in an increase of combat ability by #b #gold [ROOT.GetCountry.MakeScope.Var('naval_innovations').GetValue|0]%#!#! once research is finished."
+ je_dreadnought_tech_goal: "Research is finished"
+
+ je_battleship_tech: "Developing Battleships"
+ je_battleship_tech_reason: "We are developing new shipbuilding techniques, which will be used in the construction of Super-Dreadnought battleships.\nOur current level of Naval Innovation is #b #gold [ROOT.GetCountry.MakeScope.Var('naval_innovations').GetValue|0]#!#!. This will result in an increase of combat ability by #b #gold [ROOT.GetCountry.MakeScope.Var('naval_innovations').GetValue|0]%#!#! once research is finished."
+ je_battleship_tech_goal: "Research is finished"
+
+ je_american_modernization: "Modernizing the Navy"
+ je_american_modernization_status: "We are in the process of expanding and modernizing our navy."
+ je_american_modernization_reason: "Our navy is pitifully small for a nation of our stature. We need to expand it if we want to have a place in world affairs."
+ je_american_modernization_goal: "Our navy has tripled in size."
+
+#######
+# Decisions
+#######
+
+ naval_conference_decision: "Hold a Naval Conference"
+ naval_conference_decision_desc: "We shall hold a naval disarmament conference, to prevent an arms race from escalating."
+ naval_conference_trigger_tt: "No Great Power is at war."
+ naval_conference_decision_tt: "Calls a conference in our capital"
+ cheat_treaty_decision: "Cheat the treaty"
+ cheat_treaty_decision_desc: "By fudging the books, we can pretend to be following the treaty while secretly staying above the established limits."
+ leave_two_power_standard_decision: "Abandon the Two-Power Standard"
+ leave_two_power_standard_decision_desc: "It's no longer sustainable to maintain the Two-Power Standard, we need to cut costs."
+ pre_dreadnoughts_decision: "Develop Pre-Dreadnoughts"
+ pre_dreadnoughts_decision_desc: "Start the process to develop the technology to build Pre-Dreadnoughts"
+ dreadnoughts_decision: "Develop Dreadnoughts"
+ dreadnoughts_decision_desc: "Start the process to develop the technology to build Dreadnoughts"
+ battleships_decision: "Develop Battleships"
+ battleships_decision_desc: "Start the process to develop the technology to build Super-Dreadnought Battleships"
+ buy_predreadnoughts_decsion: "Purchase Pre-Dreadnoughts"
+ buy_predreadnoughts_decsion_desc: "We will purchase some new battleships for our navy."
+ buy_dreadnoughts_decsion: "Purchase Dreadnoughts"
+ buy_dreadnoughts_decsion_desc: "Dreadnoughts are the future of naval warfare, we should try to buy some."
+ great_white_fleet_decision: "The Great White Fleet"
+ great_white_fleet_decision_desc: "Let's display our fleet to the world."
+ gwf_decision_peace_tooltip: "No countries in the itinerary are at war."
+ increase_professionalism_decision: "Increase Navy Professionalism"
+ increase_professionalism_decision_desc: "Take measures to increase our Navy Professionalism."
+ increase_professionalism_decision_possible: "We haven't increased our Navy Professionalism in less than a year."
+ increase_professionalism_decision_tooltip: "We'll receive an opportunity to increase our Navy Professionalism."
+ maintain_current_navyprof_decision: "Maintain Current Navy Professionalism"
+ maintain_current_navyprof_decision_desc: "By continuosly investin in our navy, we can prevent our Navy Professionalism from decaying. However, we won't be able to increase it either."
+ stop_maintaining_navyprof_decision: "Stop Maintaining Navy Professionalism"
+ stop_maintaining_navyprof_decision_desc: "We'll stop maintaining our current level of Navy Professionalism. That will allow it to naturally decay, but we'll be able to increase it through other decisions."
+ 
+
+######
+# Names
+######
+
+ Isambard_Kingdom: "Isambard Kingdom"
+ Brunel: "Brunel"
+ alfred_thayer: "Alfred Thayer"
+ mahan: "Mahan"
+
+######
+# Notifications
+######
+
+ notification_dreadnought_notification_name: "Dreadnought Launched"
+ notification_dreadnought_notification_desc: "[SCOPE.sCountry('dreadnought_country').GetName] has launched the first Dreadnought battleship, changing the face of naval warfare"
+ notification_dreadnought_notification_tooltip: "#header $notification_dreadnought_notification_name$#!\n$TOOLTIP_DELIMITER$\n$notification_dreadnought_notification_desc$"
+
+ notification_battleship_explosion_notification_name: "[SCOPE.sCountry('exploding_country').GetAdjective] Battleship Explodes!"
+ notification_battleship_explosion_notification_desc: "A battleship belonging to [SCOPE.sCountry('exploding_country').GetCustom('use_the')][SCOPE.sCountry('exploding_country').GetName] has exploded. They are blaming [SCOPE.sCountry('scapegoat_country').GetCustom('use_the')][SCOPE.sCountry('scapegoat_country').GetName] for the incident."
+ notification_battleship_explosion_notification_tooltip: "#header $notification_battleship_explosion_notification_name$#!\n$TOOLTIP_DELIMITER$\n$notification_battleship_explosion_notification_desc$"
+
+
+
+######
+# Customizable Localization
+######
+
+# Navy Names
+ generic_navy_name: "[ROOT.GetCountry.GetAdjectiveNoFormatting] Navy"
+ generic_imperial_navy: "Imperial [ROOT.GetCountry.GetAdjectiveNoFormatting] Navy"
+ generic_royal_navy: "Royal [ROOT.GetCountry.GetAdjectiveNoFormatting] Navy"
+ royal_navy: "Royal Navy"
+ united_states_navy: "United States Navy"
+ confederate_states_navy: "Confederate States Navy"
+ japanese_navy: "Japanese Navy"
+ soviet_navy: "Soviet Navy"
+ imperial_chinese_navy: "Imperial Chinese Navy"
+ republic_of_china_navy: "Republic of China Navy"
+ peoples_liberation_army_navy: "People's Liberation Army Navy"
+
+# Propellants
+ cordite: "Cordite"
+ poudre_b: "Poudre B"
+ smokeless_powder: "smokeless powder"
+
+# South American Battleship
+ riachuelo: "Riachuelo"
+ libertad: "Libertad"
+ capitan_prat: "Capitán Prat"
+ almirante_grau: "Almirante Grau"
+ generic_new_battleship: "new battleship"
+
+ # The or not the, that's the question
+ the: "the "
+ no_the: ""
+
+ # Purchased Dreadnought
+ bb_minas_geraes: "battleship Minas Geraes"
+ bb_rivadavia: "battleship Rivadavia"
+ bb_almirante_latorre: "battleship Almirante Latorre"
+ bb_osman_i: "battleship Sultan Osman I"
+ generic_new_dreadnought: "new battleship"
+
+ # Reason for taking funds out of the navy
+ fund_alcohol_addiction: "fuel their alcoholism"
+ fund_opium_addiction: "fuel their opium addiction"
+ fund_questionable_parties: "host parties of questionable nature"
+ build_new_summer_palace: "build a new summer palace"
+ fund_cocaine_addiction: "fuel their cocaine addiction"
+ build_fairytale_castle: "build a fairytale castle"
+ fund_banquets: "host expensive banquets"
+
+ # The country's first dreadnought
+ generic_first_dreadnought: "first dreadnought-type battleship in our country"
+ custom_dreadnought: "#yellow [ROOT.GetCountry.GetCustom('flotilla_prefix')] Dreadnought#!"
+ custom_nassau: "#yellow [ROOT.GetCountry.GetCustom('flotilla_prefix')] Nassau#!"
+ custom_westfalen: "#yellow [ROOT.GetCountry.GetCustom('flotilla_prefix')] Westfalen#!"
+ custom_kawachi: "#yellow [ROOT.GetCountry.GetCustom('flotilla_prefix')] Kawachi#!"
+ custom_dante_alighieri: "#yellow [ROOT.GetCountry.GetCustom('flotilla_prefix')] Dante Alighieri#!"
+ custom_tegetthoff: "#yellow [ROOT.GetCountry.GetCustom('flotilla_prefix')] Tegetthoff#!"
+ custom_courbet: "#yellow [ROOT.GetCountry.GetCustom('flotilla_prefix')] Courbet#!"
+ custom_gangut: "#yellow [ROOT.GetCountry.GetCustom('flotilla_prefix')] Gangut#!"
+ custom_delaware: "#yellow [ROOT.GetCountry.GetCustom('flotilla_prefix')] Delaware#!"
+
+ # The gun caliber of their first super-dreadnought
+ 13p5_inch: "13.5 inch"
+ 14_inch: "14 inch"
+ 340_mm: "340 mm"
+ 356_mm: "356 mm"
+ 381_mm: "381 mm"
+ 35_cm: "35 cm"
+ 36_cm: "36 cm"
+ 38_cm: "38 cm"
+ 
+
+######
+# Custom triggers
+######
+
+ predreadnought_trigger_tt: "At least 5 levels of naval yards with ironclad production active"
+ dreadnought_trigger_tt: "At least 10 levels of naval yards with steel shipbuilding active"
+ battleship_trigger_tt: "At least 15 levels of naval yards with turbine shipbuilding active"
+ high_navyprof_option_tt: "This option is available because of our #p HIGH#! @navyprof![concept_navy_professionalism]"
+
+######
+# AI Strategies
+######
+
+ ai_strategy_maintain_two_power_standard: "Maintain Two-Power Standard"
+ ai_strategy_maintain_two_power_standard_desc: "[COUNTRY.GetName] wants to maintain naval supremacy."
+
+
+######
+# Modifier Types
+######
+
+ modifier_building_naval_yards_throughput_mult: "$building_naval_yards$ building [concept_throughput]"
+ modifier_building_naval_yards_throughput_mult_desc: "A bonus or penalty to both input and output of $building_naval_yards$"
+ modifier_building_group_bg_navy_mortality_mult: "Naval Base Employee Mortality"
+ modifier_building_group_bg_navy_soldiers_mortality_mult: "Naval Base Servicemen Mortality"
+ modifier_building_group_bg_navy_soldiers_standard_of_living_add: "Naval Base Servicemen Standard of Life"
+
+# Goods
+ modifier_building_input_tts_manowars_add: "@tts_manowars! Men-o-War input per level"
+ modifier_building_input_tts_warships_add: "@tts_warships! Warships input per level"
+ modifier_building_input_tts_capital_ships_add: "@tts_capital_ships! Capital Ships input per level"
+
+ modifier_building_output_tts_manowars_add: "@tts_manowars! Men-o-War output per level"
+ modifier_building_output_tts_warships_add: "@tts_warships! Warships output per level"
+ modifier_building_output_tts_capital_ships_add: "@tts_capital_ships! Capital Ships output per level"
+

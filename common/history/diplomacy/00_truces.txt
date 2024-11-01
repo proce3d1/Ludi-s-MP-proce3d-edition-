@@ -1,0 +1,245 @@
+﻿DIPLOMACY = {
+	c:NET ?= {
+		create_bidirectional_truce = {
+			country = c:BEL
+			months = 7
+		}
+	}	
+}
+
+DIPLOMACY = {
+	c:EGY= {
+		create_bidirectional_truce = {
+			country = c:TUR
+			months = 48
+		}
+	}	
+}
+
+DIPLOMACY = {
+	c:ASH= {
+		create_bidirectional_truce = {
+			country = c:GBR
+			months = 6
+		}
+	}	
+}
+
+DIPLOMACY = {
+	c:GRE= {
+		create_bidirectional_truce = {
+			country = c:TUR
+			months = 60
+		}
+	}	
+}
+
+DIPLOMACY = {
+	c:SIA= {
+		create_bidirectional_truce = {
+			country = c:DAI
+			months = 36
+		}
+	}	
+}
+
+DIPLOMACY = {
+	c:SAR= {
+		create_bidirectional_truce = {
+			country = c:FRA
+			months = 120
+		}
+	}	
+}
+
+DIPLOMACY = {
+	c:SAR= {
+		create_bidirectional_truce = {
+			country = c:AUS
+			months = 120
+		}
+	}	
+}
+
+DIPLOMACY = {
+	c:RUS= {
+		create_bidirectional_truce = {
+			country = c:CHI
+			months = 60
+		}
+	}	
+}
+
+DIPLOMACY = {
+	c:FRA= {
+		create_bidirectional_truce = {
+			country = c:CHI
+			months = 60
+		}
+	}	
+}
+
+DIPLOMACY = {
+	c:SPA= {
+		create_bidirectional_truce = {
+			country = c:CHI
+			months = 60
+		}
+	}	
+}
+
+DIPLOMACY = {
+	c:RUS= {
+		create_bidirectional_truce = {
+			country = c:JAP
+			months = 60
+		}
+	}	
+}
+
+DIPLOMACY = {
+	c:GBR= {
+		create_bidirectional_truce = {
+			country = c:JAP
+			months = 60
+		}
+	}	
+}
+
+DIPLOMACY = {
+	c:FRA= {
+		create_bidirectional_truce = {
+			country = c:JAP
+			months = 60
+		}
+	}	
+}
+
+DIPLOMACY = {
+	c:SPA= {
+		create_bidirectional_truce = {
+			country = c:JAP
+			months = 60
+		}
+	}	
+}
+
+DIPLOMACY = {
+	c:POR= {
+		create_bidirectional_truce = {
+			country = c:JAP
+			months = 60
+		}
+	}	
+}
+
+DIPLOMACY = {
+	c:JAP= {
+		create_bidirectional_truce = {
+			country = c:CHI
+			months = 60
+		}
+	}	
+}
+
+DIPLOMACY = {
+	c:RUS= {
+		create_bidirectional_truce = {
+			country = c:PER
+			months = 120
+		}
+	}	
+}
+
+
+DIPLOMACY = {
+	c:RUS= {
+		create_bidirectional_truce = {
+			country = c:SWE
+			months = 60
+		}
+	}	
+}
+
+DIPLOMACY = {
+	c:RUS= {
+		create_bidirectional_truce = {
+			country = c:TUR
+			months = 60
+		}
+	}	
+}
+
+
+DIPLOMACY = {
+	c:GBR= {
+		create_bidirectional_truce = {
+			country = c:PER
+			months = 120
+		}
+	}	
+}
+
+DIPLOMACY = {
+	c:TUR= {
+		create_bidirectional_truce = {
+			country = c:PER
+			months = 120
+		}
+	}	
+}
+
+
+DIPLOMACY = {
+	c:SPA= {
+		create_bidirectional_truce = {
+			country = c:FRA
+			months = 60
+		}
+	}	
+}
+
+DIPLOMACY = {
+	c:FRA= {
+		create_bidirectional_truce = {
+			country = c:PRU
+			months = 60
+		}
+	}	
+}
+
+DIPLOMACY = {
+	c:RUS= {
+		create_bidirectional_truce = {
+			country = c:PRU
+			months = 60
+		}
+	}	
+}
+
+DIPLOMACY = {
+	c:CHI= {
+		create_bidirectional_truce = {
+			country = c:NET
+			months = 60
+		}
+	}	
+}
+
+DIPLOMACY = {
+	c:CHI= {
+		create_bidirectional_truce = {
+			country = c:POR
+			months = 60
+		}
+	}	
+}
+
+DIPLOMACY = {
+	c:MEX= {
+		create_bidirectional_truce = {
+			country = c:USA
+			months = 60
+		}
+	}	
+}

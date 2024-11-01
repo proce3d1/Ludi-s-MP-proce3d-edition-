@@ -1,0 +1,10 @@
+﻿l_english:
+ lost_revolution_desc:0 "You lost all your territory and pops to the revolutionary side."
+ lost_revolution.1.t:0 "Restore order and rebuild broken supply lines"
+ lost_against_revolution:0 "Lost revolutionary war"
+ lost_revolution.1.d:0 "Casualties and devastation on both sides result in a country so broken it will take some years to rebuild."
+ lost_revolution.1.a:0 "Start to rebuild your country."
+ lost_revolution.1.b:0 "It's not the right time, yet."
+ lost_revolution.1.f:0 "“ Perhaps now you will have the opportunity to effect some much-needed political change and rise from the ashes? ”"
+ 
+ lost_revolution_nothing:0 "Nothing happens."

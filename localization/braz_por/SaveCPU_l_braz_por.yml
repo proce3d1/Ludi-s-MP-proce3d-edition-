@@ -1,0 +1,19 @@
+﻿l_braz_por:
+SaveCPU_decision:0 "Save your CPU"
+SaveCPU_decision_desc:0 "Merge POPs to primary culture and country religion for ALL country."
+
+SaveCPU_event.1.t:0 "Save your CPU"
+SaveCPU_event.1.t.d:1 "It's all the fault of the Paradox."
+SaveCPU_event.1.f:0 "Tap to merge all POP into primary culture and state religion for an immediate smooth experience."
+
+SaveCPU_event.1.all:0 "Merge all POP."
+SaveCPU_event.1.all.tt:1 "All POP will change to primary culture/state religion."
+SaveCPU_event.1.limit:0 "Merge limited POP."
+SaveCPU_event.1.limit.tt:1 "All assimilations/conversions in progress are immediately completed in their entirety."
+
+SaveCPU_event.1.x:0 "Do nothing."
+SaveCPU_event.1.x.tt:1 "Continue the stress test on the CPU."
+
+
+notification_SaveCPU_notification_name:1 "Merged!"
+notification_SaveCPU_notification_desc:1 "Pops have been merged."

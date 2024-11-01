@@ -1,0 +1,2 @@
+﻿l_turkish:
+ MARKET_BALANCE_MMP:0 "#title Bilanço:#variable @money![Market.GetBalance|D+=]#!#!"

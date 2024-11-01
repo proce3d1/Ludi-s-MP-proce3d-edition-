@@ -1,0 +1,12 @@
+﻿l_english:
+ rule_ngf_unification:0 "AI Prussia Can Form NGF After Losing Leadership"
+ setting_disallow_ngf_unification:0 "Disallowed"
+ setting_disallow_ngf_unification_desc:0 "The Prussian AI will do exactly as it does in vanilla after losing the leadership war."
+ setting_allow_ngf_unification:0 "Allowed"
+ setting_allow_ngf_unification_desc:0 "The Prussian AI will be able to unify North Germany through a decision should it lose the Leadership War against Austria - only willing German minors will join the NGF this way."
+ rule_france_birth_rate:0 "French Birth Rate"
+ setting_leave_france_alone:0 "No Changes"
+ setting_leave_france_alone_desc:0 "The French birth rate is unaltered."
+ setting_dunk_on_france:0 "Decrease Birth Rate"
+ setting_dunk_on_france_desc:0 "France's accepted pops will suffer from a 20% birth rate decrease."
+ 

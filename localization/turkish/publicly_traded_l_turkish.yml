@@ -1,0 +1,7 @@
+﻿l_turkish:
+ publicly_traded_decisions:0 "Halka Açık Üretim Yöntemini Aktif Et"
+ publicly_traded_decisions_desc:0 "Tüm binaların mülkiyetini halka açık bir şirkete devredin."
+ 
+ tooltip_tradex:0 "#header Halka Açık Üretim Yöntemini Aktif Et #!\n$TOOLTIP_DELIMITER$\nTüm binaların mülkiyetini halka açık bir şirkete devredin."
+ tooltip_tradexx:0 "#header Halka Açık Üretim Yöntemini Aktif Et #!\n$TOOLTIP_DELIMITER$\n#red #italic #bold #gold Yatırım Fonları#! henüz [GetPlayer.GetName] tarafından araştırılmadı"
+ tooltip_trade:0 "[GetPlayer.GetCustom('researchedmutualfundscustom')]"

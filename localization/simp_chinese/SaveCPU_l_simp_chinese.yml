@@ -1,0 +1,19 @@
+﻿l_simp_chinese:
+SaveCPU_decision:0 "救救CPU！"
+SaveCPU_decision_desc:0 "把所有人口合并为主流文化和国教"
+
+SaveCPU_event.1.t:0 "救救CPU！"
+SaveCPU_event.1.t.d:1 "都怪P社！"
+SaveCPU_event.1.f:0 "轻轻点一下，把所有人口合并为主流文化和国教，立刻获得流畅体验。"
+
+SaveCPU_event.1.all:0 "转化所有POP"
+SaveCPU_event.1.all.tt:1 "所有POP都会被转化为它们国家的主流文化/国教。"
+SaveCPU_event.1.limit:0 "转化有限制的POP。"
+SaveCPU_event.1.limit.tt:1 "所有正在进行中的同化/转教立即全部完成。"
+
+SaveCPU_event.1.x:0 "没事了。"
+SaveCPU_event.1.x.tt:1 "继续给CPU带来极限挑战。"
+
+
+notification_SaveCPU_notification_name:1 "同化完成！"
+notification_SaveCPU_notification_desc:1 "现在可以继续了。"

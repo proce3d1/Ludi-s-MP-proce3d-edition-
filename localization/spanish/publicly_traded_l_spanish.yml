@@ -1,0 +1,7 @@
+﻿l_spanish:
+ publicly_traded_decisions:0 "Use Publicly Traded"
+ publicly_traded_decisions_desc:0 "Change ownership of the entire building to an Publicly Traded."
+ 
+ tooltip_tradex:0 "#header Use Publicly Traded #!\n$TOOLTIP_DELIMITER$\nChange ownership of the entire building to an Publicly Traded."
+ tooltip_tradexx:0 "#header Use Publicly Traded #!\n$TOOLTIP_DELIMITER$\n#red #italic #bold #gold Mutual Funds#! has not yet been researched by [GetPlayer.GetName]"
+ tooltip_trade:0 "[GetPlayer.GetCustom('researchedmutualfundscustom')]"

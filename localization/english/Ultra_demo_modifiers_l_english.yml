@@ -1,0 +1,30 @@
+﻿l_english:
+
+### unique cultural modifiers for historical pop growth outliers
+
+ fra_napoleonic_wars_legacy:0 "Napoleonic War's Legacy"
+ fra_malthusianism:0 "Malthusianism"
+ rus_russian_hardship:0 "Russian Hardship"
+ usa_land_of_opportunities:0 "Land of Opportunities"
+ 
+ infamy_modifier_1:0 "Infamy reduction"
+ infamy_modifier_2:0 "Infamy reduction"
+ infamy_modifier_3:0 "Infamy reduction"
+ infamy_modifier_4:0 "Infamy reduction"
+ infamy_modifier_5:0 "Infamy reduction"
+ infamy_modifier_6:0 "Infamy reduction"
+ infamy_modifier_7:0 "Infamy reduction"
+ infamy_modifier_8:0 "Infamy reduction"
+ infamy_modifier_9:0 "Infamy reduction"
+ infamy_modifier_10:0 "Infamy reduction"
+ infamy_modifier_11:0 "Infamy reduction"
+ infamy_modifier_rule_30:0 "Infamy setting"
+ rule_infamy_rule:0 "Infamy setting"
+ setting_no_infamy_changes:0 "No Changes"
+ setting_no_infamy_changes_desc:0 "100% Infamy generation."
+ setting_30_infamy_reduction:0 "-30% Infamy"
+ setting_30_infamy_reduction_desc:0 "Infamy generation is reduced by 30%."
+ 
+ state_trait_new_world:0 "New World State"
+ 
+

@@ -1,0 +1,10 @@
+﻿l_braz_por:
+
+building_group_bg_monuments_throughput_add:0 "Monumentos [concept_throughput]"
+building_group_bg_canals_throughput_add:0 "Canal [concept_throughput]"
+
+
+
+
+building_group_bg_monuments_throughput_add_desc:0 "Um bônus ou penalidade para tanto a entrada quanto a saída dos monumentos"
+building_group_bg_canals_throughput_add_desc:0 "Um bônus ou penalidade para tanto a entrada quanto a saída dos canal"

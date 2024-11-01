@@ -1,0 +1,55 @@
+﻿l_english:
+    
+    intervene_in_war.tt:0 "Join any [concept_war] where [SCOPE.sCountry('target_country_scope').GetName] is the [concept_war_leader]"
+    intervene_in_war:0 "Intervene in War"
+    intervene_in_war_action_name:0 "Join the [TARGET_COUNTRY.GetAdjective] War"
+    intervene_in_war_desc:0 "This [concept_diplomatic_action] allows the initiator to join any [concept_war] where the target country is the [concept_war_leader]."
+    intervene_in_war_action_notification_name:0 "[INITIATOR_COUNTRY.GetAdjective] Intervention in [TARGET_COUNTRY.GetName]"
+    intervene_in_war_action_notification_desc:0 "[INITIATOR_COUNTRY.GetName] has announced that it will give full military support to [TARGET_COUNTRY.GetName] in its war. The [INITIATOR_COUNTRY.GetAdjective] Armed Forces will now join the [TARGET_COUNTRY.GetAdjective] Armed Forces in its military operations."
+    intervene_in_war_action_notification_third_party_name:0 "[INITIATOR_COUNTRY.GetAdjective] Intervention in [TARGET_COUNTRY.GetName]"
+    intervene_in_war_action_notification_third_party_desc:0 "[INITIATOR_COUNTRY.GetName] has announced that it will give full military support to [TARGET_COUNTRY.GetName] in its war. The [INITIATOR_COUNTRY.GetAdjective] Armed Forces will now join the [TARGET_COUNTRY.GetAdjective] Armed Forces in its military operations."
+    
+    bankroll_proposal_notification_name:0 "Proposal for [concept_bankroll]"
+    bankroll_proposal_notification_desc:0 "[INITIATOR_COUNTRY.GetName] wants to [concept_bankroll] us."
+    bankroll_proposal_notification_effects_desc:0 ""
+    bankroll_proposal_accepted_name:0 "[concept_bankroll] Accepted"
+    bankroll_proposal_accepted_desc:0 "[TARGET_COUNTRY.GetName] accepted our proposal for an [concept_bankroll]."
+    bankroll_proposal_declined_name:0 "[concept_bankroll] Declined"
+    bankroll_proposal_declined_desc:0 "[TARGET_COUNTRY.GetName] declined our proposal for an [concept_bankroll]."
+
+
+    transfer_money_proposal_notification_name:0 "Proposal for Transfer Cash"
+    transfer_money_proposal_notification_desc:0 "[INITIATOR_COUNTRY.GetName] wants to transfer cash to us."
+    transfer_money_proposal_notification_effects_desc:0 ""
+    transfer_money_proposal_accepted_name:0 "Transfer Cash Accepted"
+    transfer_money_proposal_accepted_desc:0 "[TARGET_COUNTRY.GetName] accepted our proposal for Transfer Cash."
+    transfer_money_proposal_declined_name:0 "Transfer Cash Declined"
+    transfer_money_proposal_declined_desc:0 "[TARGET_COUNTRY.GetName] declined our proposal for Transfer Cash."
+    
+    transfer_money_proposal_third_party_accepted_name:0 "Transfer Cash Accepted"
+    transfer_money_proposal_third_party_accepted_desc:0 "[TARGET_COUNTRY.GetName] accepts cash transfers from [INITIATOR_COUNTRY.GetName]"
+    transfer_money_proposal_third_party_declined_name:0 "Transfer Cash Declined"
+    transfer_money_proposal_third_party_declined_desc:0 "[TARGET_COUNTRY.GetName] declines cash transfers from [INITIATOR_COUNTRY.GetName]"
+    
+    canada_growth_modifier:0 "Canadian Expansion"
+    can_unified_canada_new:0 "Canadian Federation"
+
+    australia_growth_modifier:0 "Australian Expansion"
+    aus_unified_australia_new:0 "Australian Federation"
+
+    italian_idea_modifier:0 "Italian Idea"
+    italian_unifier_prestige_new:0 "Risorgimento"
+    italian_unifiers_ig_new:0 "Italian Unifiers"
+
+    je_sick_man_main_goal:0 "Complete 6 'Tanzimat' [Concept('concept_journal_entry', '$concept_journal_entries$')]"
+    modifier_ottoman_reclaimed_syria:0 "Reclaimed Syria"
+    modifier_ottoman_egypt:0 "Conquered Egypt"
+    modifier_ottoman_urbanization:0 "Urbanization"
+    modifier_ottoman_education:0 "Education Reform"
+    modifier_ottoman_separatism:0 "Suppressed Separatism"
+    modifier_ottoman_army_modernization:0 "Army Modernized"
+    modifier_ottoman_bureaucratic_reform:0 "Bureaucratic Reform"
+
+    #notification_transfer_cash_notification_name: "Transfer Cash"
+    #notification_transfer_cash_notification_desc: "has transfered cash its intentions to expand towards its 'natural borders', spanning from the Atlantic to the Rhine."
+    #notification_transfer_cash_notification_tooltip: "#header $notification_fra_natural_borders_notification_name$#!\n$TOOLTIP_DELIMITER$\n$notification_fra_natural_borders_notification_desc$"
