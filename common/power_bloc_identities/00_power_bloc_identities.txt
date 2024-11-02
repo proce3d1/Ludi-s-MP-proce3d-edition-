@@ -613,7 +613,7 @@ identity_religious = {
 	}
 
 	leader_modifier = {
-		state_clergymen_investment_pool_efficiency_mult = 0.25
+		state_clergymen_investment_pool_efficiency_mult = 0.50
 	}
 
 	non_leader_modifier = {
