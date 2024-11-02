@@ -6,7 +6,7 @@
 	
 	modifier = {
 		country_leverage_resistance_mult = -0.25
-		state_tax_capacity_mult = -0.05
+		country_mass_migration_attraction_mult = 0.1 # New
 	}
 	
 	
