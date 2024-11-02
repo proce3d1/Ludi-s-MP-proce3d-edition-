@@ -538,7 +538,7 @@ principle_aggressive_coordination_2 = {
 		country_initiator_war_goal_maneuver_cost_mult = -0.3
 		
 		# Reduces war exhaustion from casualties, propaganda!
-		country_war_exhaustion_casualties_mult = -0.15
+		country_war_exhaustion_casualties_mult = -0.25 # -0.15
 	}
 	
 	ai_weight = {
@@ -552,17 +552,19 @@ principle_aggressive_coordination_3 = {
 
 	power_bloc_modifier = {	
 		# Reduces cohesion
-		power_bloc_cohesion_add = -10
+		# power_bloc_cohesion_add = -10
 	}
 	
 	member_modifier = {
 		# Modifiers from previous level(s)
 		country_initiator_war_goal_maneuver_cost_mult = -0.3
-		country_war_exhaustion_casualties_mult = -0.15
+		country_war_exhaustion_casualties_mult = -0.25 # -0.15
 	
 		# Countries forced to join diplomatic plays of members, other countries are not happy about this threat
 		country_join_power_bloc_member_in_plays_bool = yes
-		country_infamy_generation_mult = 0.15
+		country_infamy_generation_mult = -0.25 # 0.15
+
+		unit_supply_consumption_mult = -0.2 # New
 	}
 	
 	ai_weight = {
@@ -1601,6 +1603,8 @@ principle_sacred_civics_2 = {
 		# Lower liberty desire for subjects with the same religion
 		# This modifier actually has no effect and is just here to generate a tooltip, the effects are scripted in scripted_values
 		country_reduced_liberty_desire_same_religion_bool = yes
+
+		state_birth_rate_mult = 0.05 # New
 	}
 	
 	ai_weight = {
@@ -1616,11 +1620,14 @@ principle_sacred_civics_3 = {
 		# Modifiers from previous level(s)		
 		country_higher_diplomatic_acceptance_same_religion_bool = yes
 		country_reduced_liberty_desire_same_religion_bool = yes
+
+		state_birth_rate_mult = 0.05 # New
 	}
 
 	leader_modifier = {
 		# Allows leader to impose their own law onto member countries in the church_and_state law group
 		country_can_impose_same_lawgroup_church_and_state_in_power_bloc_bool = yes
+		country_authority_mult = 0.1 # New
 	}
 
 	ai_weight = {
@@ -1676,8 +1683,8 @@ principle_ideological_truth_2 = {
 	member_modifier = {
 		# Modifiers from previous level(s)		
 		interest_group_in_opposition_agitator_popularity_add = -33
-		country_bolster_cost_mult = -0.25
-		country_suppression_cost_mult = -0.25			
+		country_bolster_cost_mult = -0.5 # 0.25
+		country_suppression_cost_mult = -0.5 # 0.25			
 		
 		# Reduces ideological coherence penalty for IGs in same party
 		country_party_whip_impact_mult = 0.2
@@ -1695,12 +1702,14 @@ principle_ideological_truth_3 = {
 	member_modifier = {
 		# Modifiers from previous level(s)		
 		interest_group_in_opposition_agitator_popularity_add = -33
-		country_bolster_cost_mult = -0.25
-		country_suppression_cost_mult = -0.25		
+		country_bolster_cost_mult = -0.5 # 0.25
+		country_suppression_cost_mult = -0.5 # 0.25		
 		country_party_whip_impact_mult = 0.2
+		country_suppression_ig_attraction_mult = 0.2 # New
+		country_bolster_ig_attraction_mult = 0.2 # New
 		
 		# Members Legitimacy can't fall under 25
-		country_legitimacy_min_add = 25		
+		country_legitimacy_min_add = 35	# 25	
 	}
 
 	ai_weight = {
