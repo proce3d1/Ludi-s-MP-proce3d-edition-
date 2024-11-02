@@ -1231,12 +1231,14 @@ principle_creative_legislature_3 = {
 	
 	member_modifier = {
 		# Modifiers from previous level(s)	
-		country_law_enactment_stall_mult = -0.33
+		country_law_enactment_stall_mult = -0.50 # 33
 		political_movement_preserve_support_mult = -0.33
 		political_movement_restore_support_mult = -0.33
+
+		political_movement_radicalism_mult = -0.2 # New
 		
 		# Can have one additional setback before failing a law enactment
-		country_law_enactment_max_setbacks_add = 1
+		country_law_enactment_max_setbacks_add = 2 # 1
 	}
 
 	ai_weight = {
