@@ -1707,7 +1707,7 @@ principle_ideological_truth_3 = {
 		country_bolster_cost_mult = -0.5 # 0.25
 		country_suppression_cost_mult = -0.5 # 0.25		
 		country_party_whip_impact_mult = 0.2
-		country_suppression_ig_attraction_mult = 0.2 # New
+		country_suppression_ig_attraction_mult = -0.2 # New
 		country_bolster_ig_attraction_mult = 0.2 # New
 		
 		# Members Legitimacy can't fall under 25
