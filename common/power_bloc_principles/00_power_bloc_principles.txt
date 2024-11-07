@@ -1138,9 +1138,9 @@ principle_foreign_investment_1 = {
 		# This modifier is just here to generate a tooltip. It doesn't actually do anything on its own
 		country_higher_leverage_from_economic_dependence_bool = yes
 
-		state_aristocrats_investment_pool_efficiency_mult = 0.1
-		state_farmers_investment_pool_efficiency_mult = 0.1
-		state_capitalists_investment_pool_efficiency_mult = 0.1
+		state_aristocrats_investment_pool_efficiency_mult = 0.05
+		state_farmers_investment_pool_efficiency_mult = 0.05
+		state_capitalists_investment_pool_efficiency_mult = 0.05
 	}
 	
 	ai_weight = {
