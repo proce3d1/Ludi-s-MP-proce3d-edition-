@@ -740,7 +740,7 @@ principle_food_standardization_3 = {
 		state_mortality_mult = -0.1
 		
 		# Higher SoL
-		state_standard_of_living_add = 0.5
+		state_standard_of_living_add = 1
 		
 		#Unlocks a PM for Food Industries
 	}
