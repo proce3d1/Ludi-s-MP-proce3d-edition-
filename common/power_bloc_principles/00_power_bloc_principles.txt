@@ -1448,8 +1448,7 @@ principle_divine_economics_2 = {
 
 		
 
-		state_birth_rate_mult = 0.05 # New
-		state_mortality_mult = -0.05 # New
+		state_birth_rate_mult = 0.025 # New
 
 		# New PM for Financial Districts/Manor Houses unlocked via trigger
 	}	
@@ -1469,7 +1468,6 @@ principle_divine_economics_3 = {
 		country_reduced_liberty_desire_same_religion_bool = yes
 
 		state_birth_rate_mult = 0.05 # New
-		state_mortality_mult = -0.05 # New
 	}
 
 	leader_modifier = {
