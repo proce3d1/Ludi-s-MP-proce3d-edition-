@@ -379,7 +379,7 @@ identity_ideological_union = {
 			}
 			divide = define:NDiplomacy|MIN_RELATIONS
 			multiply = define:NPowerBlocs|COHESION_TARGET_MAX
-			multiply = -1
+			multiply = -0.5
 			max = 0
 			desc = POWER_BLOC_COHESION_WORST_LEADER_RELATIONS
 		}
@@ -392,7 +392,7 @@ identity_ideological_union = {
 		 	add = {
 		 		add = "scope:power_bloc.power_bloc_worst_progressiveness_difference_government_type_with(scope:with_country)"
 		 		divide = 300	# 200 # bad progressiveness difference is usually around 100
-		 		multiply = -1
+		 		multiply = -0.5
 		 		multiply = define:NPowerBlocs|COHESION_TARGET_MAX
 		 		desc = POWER_BLOC_COHESION_WORST_PROGRESSIVENESS_DIFFERENCE
 		 	}	
@@ -405,7 +405,7 @@ identity_ideological_union = {
 		 	add = {
 		 		add = "scope:power_bloc.power_bloc_worst_progressiveness_difference_government_type_without(scope:without_country)"
 		 		divide = 300	# 200 # bad progressiveness difference is usually around 100
-		 		multiply = -1
+		 		multiply = -0.5
 		 		multiply = define:NPowerBlocs|COHESION_TARGET_MAX
 		 		desc = POWER_BLOC_COHESION_WORST_PROGRESSIVENESS_DIFFERENCE
 		 	}
@@ -415,7 +415,7 @@ identity_ideological_union = {
 		 	add = {
 				add = scope:power_bloc.power_bloc_worst_progressiveness_difference_government_type
 				divide = 300	# 200 # bad progressiveness difference is usually around 100
-				multiply = -1
+				multiply = -0.5
 				multiply = define:NPowerBlocs|COHESION_TARGET_MAX
 				desc = POWER_BLOC_COHESION_WORST_PROGRESSIVENESS_DIFFERENCE
 			}
