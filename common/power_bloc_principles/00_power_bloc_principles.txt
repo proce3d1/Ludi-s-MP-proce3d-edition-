@@ -1604,9 +1604,6 @@ principle_sacred_civics_1 = {
 	}
 
 	member_modifier = {
-		# Higher subject payments from other religions
-		country_subject_income_transfer_heathen_mult = 0.5	
-
 		state_clergymen_investment_pool_efficiency_mult = 0.50
 	}
 	
@@ -1644,9 +1641,11 @@ principle_sacred_civics_2 = {
 	}
 
 	member_modifier = {
-	# Modifiers from previous level(s)		
-	country_subject_income_transfer_heathen_mult = 0.5
-	state_clergymen_investment_pool_efficiency_mult = 0.50
+		# SoL changes less radical/more loyalist for accepted religion pops
+		state_radicals_from_sol_change_accepted_religion_mult = -0.15
+		state_loyalists_from_sol_change_accepted_religion_mult = 0.15
+
+		state_clergymen_investment_pool_efficiency_mult = 0.50
 	}
 	
 	ai_weight = {
@@ -1664,8 +1663,6 @@ principle_sacred_civics_3 = {
 	}
 	
 	member_modifier = {
-		# Modifiers from previous level(s)		
-		country_subject_income_transfer_heathen_mult = 0.5
 		state_clergymen_investment_pool_efficiency_mult = 0.50
 	
 		# SoL changes less radical/more loyalist for accepted religion pops
