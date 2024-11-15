@@ -248,6 +248,130 @@ types building_item_types
 			}
 		}
 	}
+	
+		type building_tax_with_ownership = flowcontainer {
+		direction = vertical
+		alpha = "[TransparentIfFalse( Or( GreaterThan_int32(Building.GetExpansionLevel, '(int32)0'), Building.HasConstructionQueued ))]"
+
+		### TAX/BALANCE
+
+		widget = {
+					size = { 135 15 }
+					parentanchor = hcenter 
+					widget = {
+						visible = "[And(Not(Building.IsGovernmentFunded), Not(Building.IsSubsidized))]"
+						size = { 135 15 }
+						parentanchor = hcenter
+						widget = {
+							parentanchor = hcenter
+							visible = "[Building.IsActive]"
+							textbox = {
+								text = "@money![Building.GetTaxationRevenue|+=d]#!"
+								parentanchor = hcenter
+								using = tooltip_above
+								using = fontsize_small
+								elide = right
+								autoresize = yes
+								align = nobaseline
+							}
+						}
+						tooltip = "[Building.GetTaxationRevenueTooltip]"
+					}
+					widget = {
+						visible = "[Building.IsGovernmentFunded]"
+						size = { 135 15 }
+						parentanchor = hcenter
+						widget = {
+							parentanchor = hcenter
+							visible = "[Building.IsActive]"
+							textbox = {
+								text = "@money![Subtract_CFixedPoint(Building.GetTaxationRevenue, Building.GetGovernmentExpenses)|+=d]#!"
+								parentanchor = hcenter
+								using = tooltip_above
+								fontsize = 15
+								elide = right
+								autoresize = yes
+								align = nobaseline
+							}
+						}
+						tooltip = "[Building.GetGovernmentExpensesDesc]"
+					}
+					widget = {
+						visible = "[Building.IsSubsidized]"
+						size = { 135 15 }
+						parentanchor = hcenter 
+						widget = {
+							parentanchor = hcenter
+							visible = "[Building.IsActive]"
+							textbox = {
+								text = "@money![Subtract_CFixedPoint(Building.GetTaxationRevenue, Building.GetSubsidies)|+=d]#!"
+								parentanchor = hcenter
+								using = tooltip_above
+								using = fontsize_small
+								elide = right
+								autoresize = yes
+								align = nobaseline
+
+							}
+						}
+						tooltip = "SUBSIDIZED_YES_HEADER"
+					}
+				}
+			
+
+					widget = {
+						size = { 135 20 }
+						parentanchor = hcenter
+						visible = "[And( Not(Building.HasTradeRouteRevenue), And( Not(Building.IsUrbanCenter), And( And( IsDataModelEmpty(Building.GetBuildingAssets), Not(Building.IsGovernmentFunded) ), NotEqualTo_int32(Building.GetExpansionLevel, '(int32)0'))))]"
+						widget = { 
+						    size = { 135 20 }
+						    visible = "[And( Not(Building.HasTradeRouteRevenue), And( Not(Building.IsUrbanCenter), And( And( IsDataModelEmpty(Building.GetBuildingAssets), Not(Building.IsGovernmentFunded) ), NotEqualTo_int32(Building.GetExpansionLevel, '(int32)0'))))]"
+							parentanchor = hcenter
+						textbox = {
+							name = "tutorial_highlight_weekly_balance_building"
+							text = "@money!#v [Building.GetBalance|D+=]#!"
+							parentanchor = hcenter
+							using = tooltip_above
+							using = fontsize_small
+							autoresize = yes
+							elide = right
+							align = nobaseline
+						}
+					}
+					tooltip = "[Building.GetBalanceDesc]"
+				}
+                    widget = {
+						size = { 135 15 }
+						parentanchor = hcenter
+						visible = "[Or( Not(IsDataModelEmpty(Building.GetBuildingAssets)), Or( Building.IsUrbanCenter, Building.HasTradeRouteRevenue))]"
+						widget = { 
+						    size = { 135 15 }
+						    visible = "[Or( Not(IsDataModelEmpty(Building.GetBuildingAssets)), Or( Building.IsUrbanCenter, Building.HasTradeRouteRevenue))]"
+							parentanchor = hcenter
+						textbox = {
+							name = "tutorial_highlight_weekly_balance_building"
+							text = "@money!#v [Building.GetBalance|D+=]#!"
+							parentanchor = hcenter
+							using = tooltip_above
+							autoresize = yes
+							elide = right
+							align = nobaseline
+							using = fontsize_small
+
+						}
+					}
+					tooltip = "[Building.GetBalanceDesc]"
+				 
+			}
+			
+		block "building_size_small_ownership_chart"
+		{	
+			simple_building_ownership_stacked_barchart = {
+				using = visible_if_ownership_can_be_split
+				parentanchor = hcenter
+			}
+		}
+	}
 
 	type expanded_building_grid_building_item = widget {
 

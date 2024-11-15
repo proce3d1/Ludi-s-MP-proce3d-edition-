@@ -1,0 +1,25 @@
+﻿l_german:
+
+ BUTTON_POLITICS:0 "#header Politics#!\nYour [concept_government] has [GetPlayer.GetGovernmentLegitimacy|v] [concept_legitimacy], which makes it a [GetPlayer.GetGovernmentLegitimacyLevel.GetName].\n\n$LAW_ENACTMENT_PROGRESS_TOPBAR$"
+
+ BUTTON_BUDGET:0 "#header Budget#!\n[GetPlayer.PredictEconomyHealthDesc]\n\nWe have [GetPlayer.GetNumInsufficientTaxCapacityStates] [Concept('concept_state', '$concept_states$')] with insufficient [concept_tax_capacity].\nAverage Uncollected Taxes: #v [GetPlayer.GetAverageStateTaxCollectionMult|+%0]#!#!\n$TOOLTIP_DELIMITER$\n[GetPlayer.GetAverageStateTaxCollectionMultBreakdown]\n\n#grey Average [concept_tax_waste]:#! #v [GetPlayer.GetAverageTaxWaste|-%0]#!#!\n$TOOLTIP_DELIMITER$\n[GetPlayer.GetAverageTaxWasteBreakdown]\n\n"
+
+ #BUTTON_BUILDINGS:0 "#header Buildings#!"
+
+ BUTTON_TRADE_OVERVIEW:1 "#header Market#!\nWe have #v [GetPlayer.GetNumLowMarketAccessStates]#! [Concept('concept_state', '$concept_states$')] with low [concept_market_access]\n\nWe have [GetPlayer.GetNumInactiveTradeRoutes|v] inactive [Concept('concept_trade_route', '$concept_trade_routes$')].\nWe have [GetPlayer.GetNumUnproductiveTradeRoutes|v] unproductive [Concept('concept_trade_route', '$concept_trade_routes$')]."
+
+ BUTTON_MILITARY:0 "#header Military#!\n#tooltip:[GetPlayer.GetTooltipTag],PANEL_MILITARY_ARMY_OVERVIEW_TOOLTIP #variable @battalions![GetPlayer.GetBattalions|0]#!#!  #tooltip:[GetPlayer.GetTooltipTag],PANEL_MILITARY_NAVY_CURRENT_FLOTILLAS_TOOLTIP #variable @navy_SP![GetPlayer.GetWarships|0]#!#!"
+
+ BUTTON_DIPLOMATIC_OVERVIEW:0 "#header Diplomacy#!\nWe are using [GetPlayer.GetNumDeclaredInterests|v]/#tooltippable#tooltip:[GetPlayer.GetTooltipTag],MAX_DECLARED_INTERESTS_TOOLTIP [GetPlayer.CalcMaxNumDeclaredInterests|v] of the [Concept('concept_declared_interest','$concept_declared_interests$')] we are able to support.\n\nCurrent [concept_liberty_desire] value is [GetPlayer.GetLibertyDesireRaw|v0]\n\n"
+
+ #BUTTON_TECHNOLOGY:0 "#header Technology#!\n[SelectLocalization( Technology.IsValid, 'RESEARCHING', 'NOT_RESEARCHING' )]\n"
+
+ #BUTTON_CULTURE_OVERVIEW:1 "#header Cultures#!"
+
+ BUTTON_POPULATION:0 "#header Population#!\nWe have [GetPlayer.GetNumTurmoilStates] [Concept('concept_state', '$concept_states$')] in [concept_turmoil] in our country.\n\n[GetPlayer.GetColonialGrowthDetails]\n\n[GetPlayer.GetGrowingSecessionistsDesc]"
+
+ #BUTTON_JOURNAL:0 "#header Journal#!"
+
+ BUTTON_COMPANIES_OVERVIEW:0 "#header Companies#!\nWe have established [GetPlayer.GetNumCompanies|v]/#tooltippable #tooltip:[GetPlayer.GetTooltipTag],TOOLTIP_MAX_COMPANIES [GetPlayer.GetMaxNumCompanies|v]#!#! $COMPANIES$."
+
+ BUTTON_POWER_BLOC:0 "#header Power Bloc#!\n[GetPlayer.GetPowerBloc.GetName]"

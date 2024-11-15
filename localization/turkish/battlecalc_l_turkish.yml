@@ -1,0 +1,25 @@
+﻿l_turkish:
+ concept_cnm_battle_width: "Savaş Genişliği"
+ concept_cnm_battle_width_desc: "Bir savaşın [concept_cnm_battle_width]'ü, (5 + [concept_state][concept_infrastructure]/2) * [concept_combat_width] formülüyle belirlenir. Bu, her iki tarafın da konuşlandırabileceği [Concept('concept_battalion', '$concept_battalions$')] için temel maksimum sayıdır. Tabur bonusundan sonra, sayısal tabur avantajına sahip olan takım (2.333 kat), [concept_cnm_battle_width]'ün 3 katına kadar yatırım yapabilir."
+ BATTLE_TERRAIN_CNM_BATTLEINFO: "[concept_terrain]: [Battle.GetTerrain], #tooltippable #tooltip:[Battle.GetProvince.GetState.GetTooltipTag],STATE_INFRASTRUCTURE_TOOLTIP [Battle.GetProvince.GetState.GetInfrastructure|0]#!#! [concept_infrastructure]"
+
+ BATTLE_TERRAIN_CNM_BATTLEINFO_ALL_TERRAIN: "[concept_cnm_battle_width]: #tooltippable #tooltip:[Battle.GetTooltipTag],CNM_BATTLEINFO_TERRAIN_WIDTH_TOOLTIP $CNM_BATTLEINFO_TERRAIN_MAX$#!#!;Max $CNM_BATTLEINFO_BATTLE_MAX$"
+
+ CNM_BATTLEINFO_TERRAIN_MAX: "[Battle.GetProvince.MakeScope.ScriptValue('cnm_battleinfo_province_terrain_infrastructure_force_limit')|0v]"
+ CNM_BATTLEINFO_TERRAIN_WIDTH_TOOLTIP: "Bu karedeki savaşın temel [concept_cnm_battle_width]'ü, (5 + ([Battle.GetProvince.GetState.GetInfrastructure] [concept_infrastructure] * 0.5 )) * [Battle.GetTerrain] $vanilla_GetTerrainCombatWidth$ [concept_combat_width] ) = $CNM_BATTLEINFO_TERRAIN_MAX$ [Concept('concept_battalion', '$concept_battalions$')].\n$BATTLE_TERRAIN_CNM_BATTLEINFO_BATTALION_AVAILABLE_TOOTIP$\n$BATTLE_CNM_BATTLEINFO_BATTALION_AMOUNT_BOUNS_TOOLTIP$\nEğer 2.333 kat tabura sahipseniz, o zaman 3 * [concept_cnm_battle_width]$CNM_BATTLEINFO_TERRAIN_MAX$ = $CNM_BATTLEINFO_BATTLE_MAX$ [Concept('concept_battalion', '$concept_battalions$')] getirebilirsiniz\n$CNM_BATTLEINFO_BATTALION_NOT_AVALIABLE_TOOLTIP$"
+ CNM_BATTLEINFO_BATTLE_MAX: "[Multiply_CFixedPoint(Battle.GetProvince.MakeScope.ScriptValue('cnm_battleinfo_province_terrain_infrastructure_force_limit'),'(CFixedPoint)3')|0v]"
+
+ vanilla_GetTerrainCombatWidth: "[Battle.GetProvince.GetTerrainCombatWidth|v1]"
+
+ BATTLE_TERRAIN_CNM_BATTLEINFO_BATTALION_AVAILABLE_TOOTIP: "Her taraf, cephedeki maksimum tabur sayısı Max: taburları savaşa getirmeye çalışır ~ Min:(cephedeki taburlar - (cephedeki taburlar - (cephedeki taburlar / cephe uzunluğu $BATTLE_FRONT_LENGTH_CNM_BATTLEINFO$))/2) [Concept('concept_battalion', '$concept_battalions$')], ancak [concept_cnm_battle_width]$CNM_BATTLEINFO_TERRAIN_MAX$'ı aşamaz. Bu değer X olarak belirtilir."
+
+ BATTLE_FRONT_LENGTH_CNM_BATTLEINFO: "[Battle.GetFront.MakeScope.ScriptValue('cnm_battleinfo_get_front_length')|0v]"
+
+
+
+ BATTLE_CNM_BATTLEINFO_BATTALION_AMOUNT_BOUNS_TOOLTIP: "X'ten sonra, daha fazla tabura sahip olan taraf ekstra taburlar getirebilir $BATTLE_CNM_BATTLEINFO_BATTALION_AMOUNT_BOUNS_VALUE$ [Concept('concept_battalion', '$concept_battalions$')]"
+ BATTLE_CNM_BATTLEINFO_BATTALION_AMOUNT_BOUNS_VALUE: "0 ~~ X * ((ileri taraftaki toplam taburlar / zayıf taraftaki toplam taburlar - 1)*1.5), maksimum 2X "
+
+
+ CNM_BATTLEINFO_BATTALION_NOT_AVALIABLE_TOOLTIP: "Lütfen dikkat edin, morali < 20, insan gücü < 100, seferberlik 0 olan taburlar savaşa giremez. Seçilen taburun ağırlığı: insan gücü * moral * seferberlik * temel saldırı/savunma (saldırgan için saldırı, savunmacı için savunma) * lider tarafından sahip olunma (2X))"
+

@@ -1,0 +1,296 @@
+﻿l_turkish:
+rule_headlines_minor_events: "@headlines_newsicon! #yellow Headlines#! | Küçük Olaylar"
+setting_headlines_all_minor_events: "Tüm Küçük Olaylar"
+setting_headlines_all_minor_events_desc: "Tüm Küçük Olay Başlıkları Gösterilsin"
+setting_headlines_relevant_minor_events: "Sadece İlgili Küçük Olay Başlıkları"
+setting_headlines_relevant_minor_events_desc: "Bazı daha az önemli başlıklar, ilgili bölgeyle ilgili bir [concept_interest] bulunduğunda gösterilecektir. #lore Bu olaylar, Orta Amerika'nın çöküşü veya Fransızların Cezayir'i yeniden fethetmesi gibi etkinlikleri içerir."
+setting_headlines_no_minor_events: "Küçük Olay Başlıkları Olmasın"
+setting_headlines_no_minor_events_desc: "Bazı daha az önemli başlıklar gösterilmeyecek. #lore Bu, Orta Amerika'nın çöküşü veya Fransızların Cezayir'i yeniden fethetmesi gibi olayları içerir."
+
+headlines_major_group: "@headlines_newsicon! #yellow Headlines#! | Büyük Olaylar"
+headlines_minor_group: "@headlines_newsicon! #yellow Headlines#! | Küçük Olaylar"
+headlines_constructions_group: "@headlines_newsicon! #yellow Headlines#! | İnşaatlar"
+
+
+##Civil Wars##
+#ACW Begins
+notification_headlines_acw_begin_csa_tooltip:0 "#header $notification_headlines_acw_begin_csa_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_acw_begin_csa_desc$"
+ notification_headlines_acw_begin_csa_name:0 "#b Güney Eyaletleri Bağımsızlık İlan Ediyor #!"
+ notification_headlines_acw_begin_csa_desc:1 "Köleliğin kaldırılması için artan destek karşısında, [SCOPE.sCountry('csa_scope').GetName] açık isyan halindedir."
+
+notification_headlines_acw_begin_fsa_tooltip:0 "#header $notification_headlines_acw_begin_fsa_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_acw_begin_fsa_desc$"
+ notification_headlines_acw_begin_fsa_name:0 "#b Kuzey Eyaletleri Bağımsızlık İlan Ediyor #!"
+ notification_headlines_acw_begin_fsa_desc:1 "Kesinlikle kölelik yanlısı bir tutumla karşı karşıya kalan [SCOPE.sCountry('fsa_scope').GetName] açık isyan halindedir."
+
+#ACW Ends
+notification_headlines_acw_end_slaver_tooltip:0 "#header $notification_headlines_acw_end_slaver_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_acw_end_slaver_desc$"
+ notification_headlines_acw_end_slaver_name:0 "#b Birleşik Devletler'de Kölelik Hüküm Sürüyor #!"
+ notification_headlines_acw_end_slaver_desc:1 "Amerikan İç Savaşı, kölelik yanlılarının zaferiyle sona erdi."
+
+notification_headlines_acw_end_emancipation_tooltip:0 "#header $notification_headlines_acw_end_emancipation_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_acw_end_emancipation_desc$"
+ notification_headlines_acw_end_emancipation_name:0 "#b Amerikan İç Savaşı Sona Erdi #!"
+ notification_headlines_acw_end_emancipation_desc:1 "Amerikan İç Savaşı, abolüsyonistlerin zaferiyle sona erdi."
+
+#ACW Ends (Stalemate)
+notification_headlines_acw_end_stalemate_tooltip:0 "#header $notification_headlines_acw_end_stalemate_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_acw_end_stalemate_desc$"
+ notification_headlines_acw_end_stalemate_name:0 "#b Bölünmüş Devletler #!"
+ notification_headlines_acw_end_stalemate_desc:1 "Amerikan İç Savaşı, [SCOPE.sCountry('usa_scope').GetName] ve [SCOPE.sCountry('acw_other_one_scope').GetName]'in isteksizce ateşkesi kabul etmesiyle sonuçlandı."
+
+#Taiping Appears
+notification_headlines_taiping_appears_tooltip:0 "#header $notification_headlines_taiping_appears_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_taiping_appears_desc$"
+ notification_headlines_taiping_appears_name:0 "#b Gök Krallık İlan Edildi #!"
+ notification_headlines_taiping_appears_desc:1 "Çinli bir Hristiyan hareketi [SCOPE.sCountry('taiping_scope').GetName] kuruldu ve [SCOPE.sCountry('china_scope').GetName] ülkesine karşı kutsal savaş ilan etti."
+
+#Taiping Victory
+notification_headlines_taiping_victory_tooltip:0 "#header $notification_headlines_taiping_victory_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_taiping_victory_desc$"
+ notification_headlines_taiping_victory_name:0 "#b Kutsal Çin İmparatorluğu mu? #!"
+ notification_headlines_taiping_victory_desc:1 "[SCOPE.sCountry('taiping_scope').GetName], zaferle çıkmış ve Çin'in tamamında Tanrı'ya Tapan yönetimini kurmuştur."
+
+#Taiping Defeat
+notification_headlines_taiping_defeat_tooltip:0 "#header $notification_headlines_taiping_defeat_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_taiping_defeat_desc$"
+ notification_headlines_taiping_defeat_name:0 "#b Çin'de Hristiyanlar Katledildi #!"
+ notification_headlines_taiping_defeat_desc:1 "[SCOPE.sCountry('china_scope').GetName], Tanrı'ya Tapan Topluluğu'nun isyanını bastırdı."
+
+
+##Collapses##
+#Qing Collapse
+notification_headlines_qing_collapse_tooltip:0 "#header $notification_headlines_qing_collapse_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_qing_collapse_desc$"
+ notification_headlines_qing_collapse_name:0 "#b Pekin'de Kaos #!"
+ notification_headlines_qing_collapse_desc:1 "[SCOPE.sCountry('china_scope').GetName] otoritesi tüm cephelerden kuşatılmış gibi görünüyor ve tamamen çökmüş durumda."
+ 
+#BIC Collapse
+notification_headlines_bic_collapse_tooltip:0 "#header $notification_headlines_bic_collapse_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_bic_collapse_desc$"
+ notification_headlines_bic_collapse_name:0 "#b Britanya Hindistanı'nın Sonu mu? #!"
+ notification_headlines_bic_collapse_desc:1 "Siyasi çalkantılar, uzun süredir devam eden Britanya yönetimini Hindistan üzerinde sona erdirdi ve kıtanın dört bir yanındaki eski prensler yeniden kendilerini göstermeye başladı."
+
+#DEI Collapse
+notification_headlines_dei_collapse_tooltip:0 "#header $notification_headlines_dei_collapse_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_dei_collapse_desc$"
+ notification_headlines_dei_collapse_name:0 "#b Hollanda Geri Çekiliyor — Endonezya'da Harabiyet #!"
+ notification_headlines_dei_collapse_desc:1 "Hollanda Doğu Hint Adaları'nın kolonyal yönetimi adalardan acele bir geri çekilme yaptı, yerli halklar eski efendilerinden özgür kaldı."
+
+#Central America Collapse
+notification_headlines_uca_collapse_tooltip:0 "#header $notification_headlines_uca_collapse_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_uca_collapse_desc$"
+ notification_headlines_uca_collapse_name:0 "#b Orta Amerika Dağılma Kararı Aldı #!"
+ notification_headlines_uca_collapse_desc:1 "Orta Amerika'nın eski eyaletleri resmi olarak bağımsız devletlere ayrıldı."
+
+##Formations##
+#NGF Formed
+notification_headlines_ngf_formed_tooltip:0 "#header $notification_headlines_ngf_formed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_ngf_formed_desc$"
+notification_headlines_ngf_formed_name:0 "#b Alman Devletleri Federasyon İlan Etti #!"
+ notification_headlines_ngf_formed_desc:1 "Milliyetçilik hareketi tarafından yönlendirilen Alman Konfederasyonu'nun onlarca üyesi [SCOPE.sCountry('ngf_scope').GetName] ile bir araya geldi."
+
+#SGF Formed
+notification_headlines_sgf_formed_tooltip:0 "#header $notification_headlines_sgf_formed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_sgf_formed_desc$"
+ notification_headlines_sgf_formed_name:0 "#b Güney Almanya Federe Oldu #!"
+ notification_headlines_sgf_formed_desc:1 "Birkaç Güney Almanya eyaleti [SCOPE.sCountry('sgf_scope').GetName] ile bir araya geldi."
+
+#Germany Formed
+notification_headlines_ger_formed_tooltip:0 "#header $notification_headlines_ger_formed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_ger_formed_desc$"
+ notification_headlines_ger_formed_name:0 "#b Alman Birliği #!"
+ notification_headlines_ger_formed_desc:1 "[SCOPE.sCountry('germany_scope').GetName], bugün [SCOPE.sCountry('germany_scope').GetCapital.GetCityHubName]'de resmen ilan edildi ve Alman prensliklerinin birleştiği bir devlet haline getirildi."
+
+#Italy Formed
+notification_headlines_italy_formed_tooltip:0 "#header $notification_headlines_italy_formed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_italy_formed_desc$"
+ notification_headlines_italy_formed_name:0 "#b İtalyan Birliği #!"
+ notification_headlines_italy_formed_desc:1 "İtalyan milliyetçiliği, [SCOPE.sCountry('italy_scope').GetName] oluşumuyla Yarımada'da zafer kazandı."
+
+#Central Europe Formed
+notification_headlines_central_europe_formed_tooltip:0 "#header $notification_headlines_central_europe_formed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_central_europe_formed_desc$"
+ notification_headlines_central_europe_formed_name:0 "#b Birleşik Avrupa #!"
+ notification_headlines_central_europe_formed_desc:1 "Avrupa ve dünya tarihinin önemli bir anı bugün yaşandı, [SCOPE.sCountry('hre_scope').GetName]'nın kuruluşuyla yeni bir dönem başladı."
+
+#Scandinavia Formed
+notification_headlines_scandinavia_formed_tooltip:0 "#header $notification_headlines_scandinavia_formed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_scandinavia_formed_desc$"
+ notification_headlines_scandinavia_formed_name:0 "#b İskandinavya'da Birlik #!"
+ notification_headlines_scandinavia_formed_desc:1 "[SCOPE.sCountry('scandinavia_scope').GetName]'ın kuzey ülkeleri birleşik bir hükümet oluşturdu."
+
+#Yugoslavia Formed
+notification_headlines_yugoslavia_formed_tooltip:0 "#header $notification_headlines_yugoslavia_formed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_yugoslavia_formed_desc$"
+ notification_headlines_yugoslavia_formed_name:0 "#b Yugoslav Federasyonu İlan Edildi #!"
+ notification_headlines_yugoslavia_formed_desc:1 "Batı Balkanlar, [SCOPE.sCountry('yugoslavia_scope').GetName]'ın himayesi altında birleşti."
+
+##Regime Changes##
+#British Republic
+notification_headlines_british_republic_tooltip:0 "#header $notification_headlines_british_republic_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_british_republic_desc$"
+ notification_headlines_british_republic_name:0 "#b Londra Üzerinde Üç Renk #!"
+ notification_headlines_british_republic_desc:1 "Bugün Birleşik Krallık üzerinde güneş battı, çünkü [SCOPE.sCountry('britain_scope').GetName] resmen parlamento tarafından ilan edildi."
+
+#British Council Republic
+notification_headlines_british_council_republic_tooltip:0 "#header $notification_headlines_british_council_republic_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_british_council_republic_desc$"
+ notification_headlines_british_council_republic_name:0 "#b Kızıl Londra #!"
+ notification_headlines_british_council_republic_desc:1 "[SCOPE.sCountry('britain_scope').GetName] ülkesinin kontrolünü işçi konseyleri ele geçirdi."
+
+#British Raj
+notification_headlines_british_raj_tooltip:0 "#header $notification_headlines_british_raj_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_british_raj_desc$"
+ notification_headlines_british_raj_name:0 "#b Hindistan'da Şirket Yönetiminin Sonu #!"
+ notification_headlines_british_raj_desc:1 "Sömürge yönetiminin bir dizi başarısızlığının ardından, İngiliz Doğu Hindistan Şirketi, parlamento kararıyla tamamen dağıtıldı."
+
+#Japan Restoration
+notification_headlines_japan_restoration_tooltip:0 "#header $notification_headlines_japan_restoration_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_japan_restoration_desc$"
+ notification_headlines_japan_restoration_name:0 "#b Japonya'da Restorasyon #!"
+ notification_headlines_japan_restoration_desc:1 "Yüzyıllar boyunca [SCOPE.sCountry('japan_scope').GetName]'yı yöneten şogunluk dağıtıldı ve siyasi güç [SCOPE.sCountry('japan_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('japan_scope').GetRuler.GetFirstName]'e geri verildi."
+
+#Tricolors over Rome
+notification_headlines_roman_republic_tooltip:0 "#header $notification_headlines_roman_republic_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_roman_republic_desc$"
+ notification_headlines_roman_republic_name:0 "#b Papa Roma'dan Ayrıldı #!"
+ notification_headlines_roman_republic_desc:1 "Cumhuriyetçi radikaller Ebedi Şehir'i ele geçirdi ve [SCOPE.sCountry('rome_scope').GetName]'ı ilan etti."
+
+#French Commune
+notification_headlines_french_commune_tooltip:0 "#header $notification_headlines_french_commune_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_french_commune_desc$"
+ notification_headlines_french_commune_name:0 "#b Komün Fransa'yı Ele Geçirdi #!"
+ notification_headlines_french_commune_desc:1 "Fransız komünarlar hükümeti ele geçirdi ve [SCOPE.sCountry('france_scope').GetName] yönetimini ilan etti."
+
+#French Legitimist Restoration
+notification_headlines_french_legitimist_tooltip:0 "#header $notification_headlines_french_legitimist_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_french_legitimist_desc$"
+ notification_headlines_french_legitimist_name:0 "#b Bourbonlar İktidara Geri Döndü #!"
+ notification_headlines_french_legitimist_desc:1 "Legitimist fraksiyonu [SCOPE.sCountry('france_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('france_scope').GetRuler.GetFirstName]'i [SCOPE.sCountry('france_scope').GetAdjective] tahtına geri getirdi."
+
+#French Monarchy Restored (again)
+notification_headlines_french_monarchy_returns_tooltip:0 "#header $notification_headlines_french_monarchy_returns_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_french_monarchy_returns_desc$"
+ notification_headlines_french_monarchy_returns_name:0 "#b Fransa'da Yeniden Monarşi #!"
+ notification_headlines_french_monarchy_returns_desc:1 "[SCOPE.sCountry('france_scope').GetName], [SCOPE.sCountry('france_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('france_scope').GetRuler.GetFirstName]'in taç giydirilmesiyle yeniden monarşiye döndü."
+
+#French Republic Restored
+notification_headlines_french_republic_tooltip:0 "#header $notification_headlines_french_republic_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_french_republic_desc$"
+ notification_headlines_french_republic_name:0 "#b Fransa'da Yeniden Cumhuriyet #!"
+ notification_headlines_french_republic_desc:1 "Eskiden kaldırılan [SCOPE.sCountry('france_scope').GetName], yeniden iktidara döndü."
+
+#French Empire Restored
+notification_headlines_french_empire_tooltip:0 "#header $notification_headlines_french_empire_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_french_empire_desc$"
+ notification_headlines_french_empire_name:0 "#b Yeni Bir Napolyon mu? #!"
+ notification_headlines_french_empire_desc:1 "[SCOPE.sCountry('france_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('france_scope').GetRuler.GetFirstName], Bonapart Hanedanı'nı iktidara geri getirdi ve [SCOPE.sCountry('france_scope').GetName] yönetimini ilan etti."
+
+#Communist Germany
+notification_headlines_communist_germany_tooltip:0 "#header $notification_headlines_communist_germany_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_communist_germany_desc$"
+ notification_headlines_communist_germany_name:0 "#b Alman Sosyalist Devrimi #!"
+ notification_headlines_communist_germany_desc:1 "[SCOPE.sCountry('germany_scope').GetName]'ı saran bir sosyalist devrim yaşandı."
+
+#Communist USA
+notification_headlines_communist_usa_tooltip:0 "#header $notification_headlines_communist_usa_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_communist_usa_desc$"
+ notification_headlines_communist_usa_name:0 "#b Beyaz Saray, Kızıl Bayraklar #!"
+ notification_headlines_communist_usa_desc:1 "Amerika Birleşik Devletleri'nin saygın liberal hükümeti dağıtıldı ve yerine [SCOPE.sCountry('usa_scope').GetName] kuruldu."
+
+#Monarchist USA
+notification_headlines_monarchy_usa_tooltip:0 "#header $notification_headlines_monarchy_usa_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_monarchy_usa_desc$"
+ notification_headlines_monarchy_usa_name:0 "#b Amerikan İmparatorluğu mu? #!"
+ notification_headlines_monarchy_usa_desc:1 "Amerikan cumhuriyeti nihayet çöktü ve [SCOPE.sCountry('usa_scope').GetName] kuruldu."
+
+#Technocracy USA
+notification_headlines_technocracy_usa_tooltip:0 "#header $notification_headlines_technocracy_usa_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_technocracy_usa_desc$"
+ notification_headlines_technocracy_usa_name:0 "#b Teknokratik Deneyim #!"
+ notification_headlines_technocracy_usa_desc:1 "Eski Amerika Birleşik Devletleri, [SCOPE.sCountry('usa_scope').GetName] adında bir teknokratik rejime dönüştü."
+
+#Austria-Hungary
+notification_headlines_austria_hungary_tooltip:0 "#header $notification_headlines_austria_hungary_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_austria_hungary_desc$"
+ notification_headlines_austria_hungary_name:0 "#b Avusturya-Macaristan İkili Monarşisi #!"
+ notification_headlines_austria_hungary_desc:1 "Avusturya İmparatorluğu, [SCOPE.sCountry('austria_scope').GetName] olarak yeniden düzenlendi ve ülke Avusturya ve Macaristan toprakları arasında bölündü."
+
+#Democratic Russia
+notification_headlines_democratic_russia_tooltip:0 "#header $notification_headlines_democratic_russia_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_democratic_russia_desc$"
+ notification_headlines_democratic_russia_name:0 "#b Demokratik Rusya #!"
+ notification_headlines_democratic_russia_desc:1 "[SCOPE.sCountry('russia_scope').GetName]'da bir demokratik cumhuriyet ilan edildi."
+
+#Soviet Russia
+notification_headlines_soviet_russia_tooltip:0 "#header $notification_headlines_soviet_russia_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_soviet_russia_desc$"
+ notification_headlines_soviet_russia_name:0 "#b Sovyetler İktidara #!"
+ notification_headlines_soviet_russia_desc:1 "İşçi konseylerinin devrimci hükümeti [SCOPE.sCountry('russia_scope').GetName] yönetimini Rusya'da ilan etti."
+
+#President Pedro
+notification_headlines_pedro_president_tooltip:0 "#header $notification_headlines_pedro_president_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_pedro_president_desc$"
+ notification_headlines_pedro_president_name:0 "#b Başkan Pedro #!"
+ notification_headlines_pedro_president_desc:1 "[SCOPE.sCountry('brazil_scope').GetRuler.GetFullName], kraliyet unvanını bırakarak [SCOPE.sCountry('brazil_scope').GetRuler.GetPrimaryRoleTitle]'lık makamını kabul etti, [SCOPE.sCountry('brazil_scope').GetName]."
+
+#Pedro Dies
+notification_headlines_pedro_death_tooltip:0 "#header $notification_headlines_pedro_death_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_pedro_death_desc$"
+ notification_headlines_pedro_death_name:0 "#b Dom Pedro Öldü #!"
+ notification_headlines_pedro_death_desc:1 "II. Pedro öldü, tahta [SCOPE.sCountry('brazil_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('brazil_scope').GetRuler.GetName] çıktı."
+
+## Other Events
+#Billion GDP
+notification_headlines_billion_gdp_tooltip:0 "#header $notification_headlines_billion_gdp_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_billion_gdp_desc$"
+ notification_headlines_billion_gdp_name:0 "#b Yeni Ekonomik Zirve — Gsyih'de 1 Milyar #!"
+ notification_headlines_billion_gdp_desc:1 "En son ekonomik rapor, [SCOPE.sCountry('billionare_country').GetName] toplam ekonomik çıktısının #yellow @money! 1 Milyar #!'ı aştığını doğruladı."
+
+#Tanzimat Fail
+notification_headlines_tanzimat_fail_tooltip:0 "#header $notification_headlines_tanzimat_fail_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tanzimat_fail_desc$"
+ notification_headlines_tanzimat_fail_name:0 "#b Avrupa'nın Ölü Adamı #!"
+ notification_headlines_tanzimat_fail_desc:1 "[SCOPE.sCountry('ottoman_scope').GetName] ülkesi yıllar önce başladığı yenileşme hareketlerinde başarısız oldu."
+
+#French Algeria
+notification_headlines_french_algeria_tooltip:0 "#header $notification_headlines_french_algeria_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_french_algeria_desc$"
+ notification_headlines_french_algeria_name:0 "#b Fransa Yeniden Cezayir'de #!"
+ notification_headlines_french_algeria_desc:1 "[SCOPE.sCountry('france_scope').GetName], yerel direniş güçlerine karşı kanlı bir çatışmadan sonra Cezayir üzerindeki kontrolünü yeniden sağladı."
+
+#South Pole Reached
+notification_headlines_south_pole_tooltip:0 "#header $notification_headlines_south_pole_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_south_pole_desc$"
+ notification_headlines_south_pole_name:0 "#b [SCOPE.sCountry('south_pole_country').GetAdjective] Güney Kutbuna Ulaştı #!"
+ notification_headlines_south_pole_desc:1 "[SCOPE.sCountry('south_pole_country').GetName] tarafından desteklenen bir keşif ekibi başarılı bir şekilde Güney Kutbu'na ulaştı ve geri döndü."
+
+#First State Atheism
+notification_headlines_state_atheism_tooltip:0 "#header $notification_headlines_state_atheism_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_state_atheism_desc$"
+ notification_headlines_state_atheism_name:0 "#b Tanrı Yasaklandı — İbadethaneler Yağmalandı #!"
+ notification_headlines_state_atheism_desc:1 "[SCOPE.sCountry('atheist_country').GetName], devlet ateizmi olarak adlandırılan bir politika uyguladı, dini kamu hayatından yasakladı."
+
+#Victoria Coronation
+notification_headlines_victoria_coronation_tooltip:0 "#header $notification_headlines_victoria_coronation_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_victoria_coronation_desc$"
+ notification_headlines_victoria_coronation_name:0 "#b Kraliçe Victoria Taç Giydi #!"
+ notification_headlines_victoria_coronation_desc:1 "[SCOPE.sCharacter('queen_victoria').GetFirstName], yaşında [SCOPE.sCharacter('queen_victoria').GetPrimaryRoleTitle]'ı olarak [SCOPE.sCountry('britain_scope').GetName] taç giydirildi."
+
+#Victoria Funeral
+notification_headlines_victoria_funeral_tooltip:0 "#header $notification_headlines_victoria_funeral_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_victoria_funeral_desc$"
+ notification_headlines_victoria_funeral_name:0 "#b Kraliçe Victoria'nın Cenazesi #!"
+ notification_headlines_victoria_funeral_desc:1 "Kraliçe Victoria öldü ve yerine [SCOPE.sCharacter('new_british_monarch').GetPrimaryRoleTitle] [SCOPE.sCharacter('new_british_monarch').GetFirstName] geçti."
+
+
+#Suez Canal Built
+notification_headlines_suez_canal_tooltip:0 "#header $notification_headlines_suez_canal_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_suez_canal_desc$"
+ notification_headlines_suez_canal_name:0 "#b Süveyş Kanalı Tamamlandı #!"
+ notification_headlines_suez_canal_desc:1 "[SCOPE.sCountry('suez_owner_scope').GetName], Akdeniz'i Kızıldeniz'e bağlayan [SCOPE.sBuilding('suez_canal_scope').GetName]'nı tamamladı."
+
+#Panama Canal Built
+notification_headlines_panama_canal_tooltip:0 "#header $notification_headlines_panama_canal_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_panama_canal_desc$"
+ notification_headlines_panama_canal_name:0 "#b Panama Kanalı Dünya'ya Açıldı #!"
+ notification_headlines_panama_canal_desc:1 "[SCOPE.sCountry('panama_owner_scope').GetName], Atlantik ve Pasifik okyanuslarını birleştiren [SCOPE.sBuilding('panama_canal_scope').GetName]'nı inşa etti."
+
+#Cristo Redentor
+notification_headlines_cristo_redentor_tooltip:0 "#header $notification_headlines_cristo_redentor_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_cristo_redentor_desc$"
+notification_headlines_cristo_redentor_name:0 "#b Dünyanın En Büyük İsa Anıtı #!"
+notification_headlines_cristo_redentor_desc:1 "[SCOPE.sBuilding('cristo_redentor_scope').GetName], [SCOPE.sState('rio_scope').GetCityHubName] şehrini gözetleyen bir yapı tamamlandı."
+
+
+#Statue of Liberty Built
+notification_headlines_statue_of_liberty_tooltip:0 "#header $notification_headlines_statue_of_liberty_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_statue_of_liberty_desc$"
+ notification_headlines_statue_of_liberty_name:0 "#b Özgürlüğün Işığı New York Üzerinde #!"
+ notification_headlines_statue_of_liberty_desc:1 "[SCOPE.sBuilding('statue_of_liberty_scope').GetName], [SCOPE.sState('new_york_scope').GetCityHubName] Limanı üzerinde gururla yükseliyor, kıtaya yeni gelenleri karşılıyor."
+
+#Big Ben
+notification_headlines_big_ben_tooltip:0 "#header $notification_headlines_big_ben_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_big_ben_desc$"
+notification_headlines_big_ben_name:0 "#b Londra'nın Yeni Çan Kulesi #!"
+notification_headlines_big_ben_desc:1 "[SCOPE.sBuilding('big_ben_scope').GetName], [SCOPE.sState('home_counties_scope').GetCityHubName]'de tamamlandı."
+
+#Mosque of Djenne
+notification_headlines_mosque_of_djenne_tooltip:0 "#header $notification_headlines_mosque_of_djenne_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_mosque_of_djenne_desc$"
+notification_headlines_mosque_of_djenne_name:0 "#b Cenne'de Büyük Camii Restore Edildi #!"
+notification_headlines_mosque_of_djenne_desc:1 "Yıllarca bakımsız kaldıktan sonra, [SCOPE.sBuilding('mosque_of_djenne_scope').GetName], [SCOPE.sState('djenne_scope').GetName]'de restore edildi."
+
+#Eiffel Tower
+notification_headlines_eiffel_tower_tooltip:0 "#header $notification_headlines_eiffel_tower_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_eiffel_tower_desc$"
+notification_headlines_eiffel_tower_name:0 "#b Paris'te Yeni Bir Kule - Eyfel #!"
+notification_headlines_eiffel_tower_desc:1 "[SCOPE.sBuilding('eiffel_tower_scope').GetName], artık [SCOPE.sState('eiffel_state').GetCityHubName] silüetini domine ediyor."
+
+#First Skyscraper
+notification_headlines_first_skyscraper_tooltip:0 "#header $notification_headlines_first_skyscraper_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_first_skyscraper_desc$"
+notification_headlines_first_skyscraper_name:0 "#b 'Gökdelen' Yükseklere Ulaşıyor #!"
+notification_headlines_first_skyscraper_desc:1 "[SCOPE.sCountry('first_skyscraper_country').GetName], [SCOPE.sState('first_skyscraper_state').GetCityHubName] şehrinde dünyanın ilk 'gökdelen' binasını inşa etti."
+
+
+##Dynamic
+#Great Power War
+notification_headlines_gp_war_tooltip:0 "#header $notification_headlines_gp_war_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_gp_war_desc$"
+ notification_headlines_gp_war_name:0 "#b Büyük Güçler Savaaşta #!"
+ notification_headlines_gp_war_desc:1 "[SCOPE.sCountry('great_power_scope_1').GetName] ile [SCOPE.sCountry('great_power_scope_2').GetName] arasında savaş çıktı."
+
+#Major Bankruptcy
+notification_headlines_notable_bankrupt_tooltip:0 "#header $notification_headlines_notable_bankrupt_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_notable_bankrupt_desc$"
+ notification_headlines_notable_bankrupt_name:0 "#b [SCOPE.sCountry('bankrupt_country').GetName] İflas Etti! #!"
+ notification_headlines_notable_bankrupt_desc:1 "[SCOPE.sCountry('bankrupt_country').GetName] hükümeti bu sabah iflas ettiğini duyurdu. [SCOPE.sCountry('bankrupt_country').GetName] halkını kötü günler bekliyor..."

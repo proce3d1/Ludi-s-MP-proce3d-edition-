@@ -350,6 +350,8 @@ types building_panels
 			blockoverride "state_name_button" {}
 			
 			blockoverride "productivity" {}
+			
+			blockoverride "balance" {}
 
 			blockoverride "animated_building_controls" {}
 			blockoverride "animated_building_controls_trigger" {}
@@ -1613,7 +1615,7 @@ types building_panels
 
 		### EXPAND / SUBSIDIZE ETC
 		widget = {
-			size = { @panel_width 40 }
+			size = { @panel_width 50 }
 			
 			block "background" {
 				background = {
@@ -1626,30 +1628,7 @@ types building_panels
 				layoutpolicy_vertical = expanding
 				spacing = 5
 				
-				vbox = {
-					### DOWNSIZE / EXPAND
-					building_level_controls = {
-						blockoverride "controller_size" {
-							size = { 130 35 }
-						}
-					}
-
-					### BUILD PROGRESS
-					hbox = {
-						visible = "[Building.HasConstructionQueued]"
-
-						default_progressbar_horizontal = {
-							tooltip = "BUILDING_PROGRESS_TOOLTIP"
-							size = { 110 5 }
-
-							blockoverride "values" {
-								value = "[Building.GetConstructionProgressPercentage]"
-								min = 0
-								max = 1
-							}
-						}
-					}
-				}				
+				
 
 		### STATE NAME AND BUTTON
 			block "state_name_button" {
@@ -1745,7 +1724,7 @@ types building_panels
 
 						item = {
 							icon = {
-								size = { 35 35 }
+								size = { 30 30 }
 								tooltip = "TOOLTIP_STATE_TRAIT"
 								using = tooltip_ne
 								onmousehierarchyenter = "[AccessHighlightManager.HighlightStateTrait(StateTrait.Self)]"
@@ -1771,16 +1750,76 @@ types building_panels
 							}
 						}
 					}
+											
+					### PEASANTS/UNEMPLOYED
+					flowcontainer = {
+						direction = vertical
+						tooltip = "STATE_AVAILABLE_LABOR_TOOLTIP"
 
-					block "productivity" {
-						textbox = {
-							visible = "[And(Not(Building.IsGovernmentFunded), Not(Building.IsSubsistenceBuilding))]"
-							using = productivity_tooltip_with_graph
-							using = tooltip_ne
-							raw_text = "@money![Building.GetAverageAnnualEarningsPerEmployeeFormatted|+]"
-							align = hcenter|nobaseline
-							autoresize = yes
+						flowcontainer = {
+							spacing = 2
+							icon = {
+							size = { 20 20 }
+								texture = "gfx/interface/icons/pops_icons/peasants.dds"
+								visible = "[Not(Pop.IsEmployed)]"
+								parentanchor = vcenter
+							}
+							
+							textbox = {
+								text = "[State.GetNumSubsistenceWorkingAdults|Dv]"
+								autoresize = yes
+								align = hcenter|nobaseline
+								parentanchor = vcenter
+							}
+						}
+
+						flowcontainer = {
+							spacing = 2
+							icon = {
+								size = { 20 20 }
+								texture = "gfx/interface/icons/generic_icons/employed_not.dds"
+								visible = "[Not(Pop.IsEmployed)]"
+								parentanchor = vcenter
+							}
+
+							textbox = {
+								text = "[State.GetNumUnemployedWorkingAdults|Dv]"
+								autoresize = yes
+								align = hcenter|nobaseline
+								parentanchor = vcenter
+							}
+							
+							
+						}
+					}
 					
+					### BALANCE/PRODUCTIVITY
+				flowcontainer = {
+					direction = vertical
+					
+						block "productivity" {
+							textbox = {
+								visible = "[And(Not(Building.IsGovernmentFunded), Not(Building.IsSubsistenceBuilding))]"
+								using = productivity_tooltip_with_graph
+								using = tooltip_ne
+								raw_text = "@money![Building.GetAverageAnnualEarningsPerEmployeeFormatted|+]"
+								align = hcenter|nobaseline
+								autoresize = yes
+						
+							}
+						}					
+					
+					block "balance" {
+							textbox = {
+								name = "tutorial_highlight_weekly_balance_building"
+								text = "@money!#v [Building.GetBalance|D+=]#!"
+								tooltip = "[Building.GetBalanceDesc]" 
+								using = tooltip_ne
+								elide = right
+								align = hcenter|nobaseline
+								autoresize = yes
+						
+							}
 						}
 					}
 				}
@@ -1790,40 +1829,69 @@ types building_panels
 		block "divider" {}
 
 		### PMS / EMPLOYMENT / CASH RESERVES
-		container = {
-			minimumsize = { @panel_width 80 }
-			container = {
-				parentanchor = vcenter
+		widget = {
+			minimumsize = { @panel_width 75 }
+			
+			hbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+				
+							vbox = {
+					### DOWNSIZE / EXPAND
+					building_level_controls = {
+						blockoverride "controller_size" {
+							size = { 130 35 }
+						}
+					}
 
+					### BUILD PROGRESS
+					hbox = {
+						visible = "[Building.HasConstructionQueued]"
+
+						default_progressbar_horizontal = {
+							tooltip = "BUILDING_PROGRESS_TOOLTIP"
+							size = { 110 5 }
+
+							blockoverride "values" {
+								value = "[Building.GetConstructionProgressPercentage]"
+								min = 0
+								max = 1
+							}
+						}
+					}
+				}
+				
+ 			container = {
+				
 				flowcontainer = {
-					parentanchor = vcenter
-					margin_left = 2
 					
 					condensed_building_information_pms = {
 						blockoverride "pms_slot_sizes" {
-							addcolumn = 72
-							addrow = 70
+							addcolumn = 52
+							addrow = 50
 						}
 						blockoverride "pms_minimumsize" {
 							minimumsize = { 208 -1 }
 						}
 						blockoverride "pms_item_size" {
-							size = { 70 70 }
+							size = { 50 50 }
 						}
 					}
 				}
 
 				block "extra_items_in_production_methods_list" {}
 			}
+		
+		
 
 			building_progressbars = {
 				position = { -5 0 }
-				parentanchor = right|vcenter
 
 				blockoverride "progressbar_size" {
-					size = { 230 26 }
+					size = { 180 26 }
 				}
 			}
+		  }
 		}
 	}
 
@@ -2183,129 +2251,6 @@ types building_panels
 				widgetid = "[Concatenate('building_details_expand', Building.GetIDString)]"
 				position = { 0 0 }
 				parentanchor = right|vcenter
-			}
-		}
-	}
-
-	type building_tax_with_ownership = flowcontainer {
-		direction = vertical
-		alpha = "[TransparentIfFalse( Or( GreaterThan_int32(Building.GetExpansionLevel, '(int32)0'), Building.HasConstructionQueued ))]"
-
-		### TAX/BALANCE
-
-		widget = {
-					size = { 135 15 }
-					parentanchor = hcenter 
-					widget = {
-						visible = "[And(Not(Building.IsGovernmentFunded), Not(Building.IsSubsidized))]"
-						size = { 135 15 }
-						parentanchor = hcenter
-						widget = {
-							parentanchor = hcenter
-							visible = "[Building.IsActive]"
-							textbox = {
-								text = "@money![Building.GetTaxationRevenue|+=d]#!"
-								parentanchor = hcenter
-								using = tooltip_above
-								using = fontsize_small
-								elide = right
-								autoresize = yes
-								align = nobaseline
-							}
-						}
-						tooltip = "[Building.GetTaxationRevenueTooltip]"
-					}
-					widget = {
-						visible = "[Building.IsGovernmentFunded]"
-						size = { 135 15 }
-						parentanchor = hcenter
-						widget = {
-							parentanchor = hcenter
-							visible = "[Building.IsActive]"
-							textbox = {
-								text = "@money![Subtract_CFixedPoint(Building.GetTaxationRevenue, Building.GetGovernmentExpenses)|+=d]#!"
-								parentanchor = hcenter
-								using = tooltip_above
-								using = fontsize_small
-								elide = right
-								autoresize = yes
-								align = nobaseline
-							}
-						}
-						tooltip = "[Building.GetGovernmentExpensesDesc]"
-					}
-					widget = {
-						visible = "[Building.IsSubsidized]"
-						size = { 135 15 }
-						parentanchor = hcenter 
-						widget = {
-							parentanchor = hcenter
-							visible = "[Building.IsActive]"
-							textbox = {
-								text = "@money![Subtract_CFixedPoint(Building.GetTaxationRevenue, Building.GetSubsidies)|+=d]#!"
-								parentanchor = hcenter
-								using = tooltip_above
-								using = fontsize_small
-								elide = right
-								autoresize = yes
-								align = nobaseline
-
-							}
-						}
-						tooltip = "SUBSIDIZED_YES_HEADER"
-					}
-				}
-			
-
-					widget = {
-						size = { 135 20 }
-						parentanchor = hcenter
-						visible = "[And( Not(Building.HasTradeRouteRevenue), And( Not(Building.IsUrbanCenter), And( And( IsDataModelEmpty(Building.GetBuildingAssets), Not(Building.IsGovernmentFunded) ), NotEqualTo_int32(Building.GetExpansionLevel, '(int32)0'))))]"
-						widget = { 
-						    size = { 135 20 }
-						    visible = "[And( Not(Building.HasTradeRouteRevenue), And( Not(Building.IsUrbanCenter), And( And( IsDataModelEmpty(Building.GetBuildingAssets), Not(Building.IsGovernmentFunded) ), NotEqualTo_int32(Building.GetExpansionLevel, '(int32)0'))))]"
-							parentanchor = hcenter
-						textbox = {
-							name = "tutorial_highlight_weekly_balance_building"
-							text = "@money!#v [Building.GetBalance|D+=]#!"
-							parentanchor = hcenter
-							using = tooltip_above
-							using = fontsize_small
-							autoresize = yes
-							elide = right
-							align = nobaseline
-						}
-					}
-					tooltip = "[Building.GetBalanceDesc]"
-				}
-                    widget = {
-						size = { 135 15 }
-						parentanchor = hcenter
-						visible = "[Or( Not(IsDataModelEmpty(Building.GetBuildingAssets)), Or( Building.IsUrbanCenter, Building.HasTradeRouteRevenue))]"
-						widget = { 
-						    size = { 135 15 }
-						    visible = "[Or( Not(IsDataModelEmpty(Building.GetBuildingAssets)), Or( Building.IsUrbanCenter, Building.HasTradeRouteRevenue))]"
-							parentanchor = hcenter
-						textbox = {
-							name = "tutorial_highlight_weekly_balance_building"
-							text = "@money!#v [Building.GetBalance|D+=]#!"
-							parentanchor = hcenter
-							using = tooltip_above
-							autoresize = yes
-							elide = right
-							align = nobaseline
-							using = fontsize_small
-						}
-					}
-					tooltip = "[Building.GetBalanceDesc]"
-				 
-			}
-			
-		block "building_size_small_ownership_chart"
-		{	
-			simple_building_ownership_stacked_barchart = {
-				using = visible_if_ownership_can_be_split
-				parentanchor = hcenter
 			}
 		}
 	}

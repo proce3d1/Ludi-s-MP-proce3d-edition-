@@ -1,0 +1,2 @@
+﻿l_japanese:
+ ANTY_ARMY_CURRENTCOST:0 "@money![Country.GetMilitaryGoodsExpenses|D-=]"
