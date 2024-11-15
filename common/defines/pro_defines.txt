@@ -13,6 +13,9 @@ NEconomy = {
 
 	GOODS_LEADERBOARD_SIZE = 20					# How many spots there are on each goods leaderboard, default: 10
 
+	REINVESTMENT_EFFICIENCY_MAX = 2.5	# 3.0						# Maximum conversion of reinvestment to investment pool
+	REINVESTMENT_BASE_EFFICIENCY_THRESHOLD = 75000000	# 10000000	# Below this amount of GDP, increase reinvestment multiplier on a linear scale up to REINVESTMENT_EFFICIENCY_MAX at 0
+
 		
 	BUILDING_RAISE_WAGES_MIN_RELEVANT_POP_SIZE = 50 # Pops with less workforce than this are ignored when checking whether a profitable building should raise wages because of radicalizing workers
 	BUILDING_RAISE_WAGES_DISCRIMINATION_FACTOR = 0.75	# 0.66 # Profitable buildings only care to raise wages for discriminated pops if their wealth to expected SoL ratio is less than this
@@ -21,8 +24,10 @@ NEconomy = {
 	BUILDING_PROFIT_TARGET_TO_RAISE_WAGES = 0.25	# 0.3		# Required profit margin to consider raising wages for SoL or employment reasons, with BUILDING_WEEKS_BETWEEN_PAY_CHANGES weeks cooldown
 	BUILDING_PROFIT_TARGET_TO_LOWER_WAGES = 0.1	# 0.15	# If profit margin is this or below, consider lowering wages for SoL or employment reasons, with BUILDING_WEEKS_BETWEEN_PAY_CHANGES weeks cooldown
 	BUILDING_MAX_EMPLOYMENT_FRACTION_TO_RAISE_WAGES = 0.9	# 0.5 # If the employment fraction of a building is above this, don't raise wages just to try and snipe employees from other buildings
-	COMPANY_PRODUCTIVITY_RATIO_HIGH_THRESHOLD = 1.2	# 1.25		# Companies whose productivity exceeds this factor of the global average will be considered high-productivity companies
-	COMPANY_PRODUCTIVITY_RATIO_LOW_THRESHOLD = 0.8	# 0.75		# Companies whose productivity is below this factor of the global average will be considered low-productivity companies
+	COMPANY_PRODUCTIVITY_RATIO_HIGH_THRESHOLD = 1.15	# 1.25		# Companies whose productivity exceeds this factor of the global average will be considered high-productivity companies
+	COMPANY_PRODUCTIVITY_RATIO_LOW_THRESHOLD = 0.85	# 0.75		# Companies whose productivity is below this factor of the global average will be considered low-productivity companies
+	COMPANY_ON_ESTABLISH_COOLDOWN_MONTHS = 48	# 60			# Cooldown in months after establishing a company before you can disband it
+	COMPANY_ON_DISBAND_COOLDOWN_MONTHS = 36	# 48				# Cooldown in months after disbanding a company before you can re-establish it
 
 }
 	
@@ -72,6 +77,178 @@ NPops = {
 	JOB_SATISFACTION_LOSSES_MIN_MULT = -5					# Min multiplier from the ratio between pop losses and wages (or if you will, max magnitude)
 	JOB_SATISFACTION_LOSSES_BASE = 50						# Base value to be multiplied by the ratio between losses and wages 
 
+##### MIGRATION #####
+
+## General ##
+	MIGRATION_MIN_STATE_POPS = 20000											# A state with less population than this will not get emigration
+	MIGRATION_STATE_POPULATION_THRESHOLD = 100000								# States with less pops than this have reduced market emigration numbers to avoid total depopulation
+	MIGRATION_MAX_PER_STATE_BASE = 500											# No more than this amount of people can move from or to a state in a single week (base)
+	MIGRATION_MAX_PER_STATE_INFRASTRUCTURE = 5									# No more than this amount of people can move from or to a state in a single week (scales with infrastructure)
+	MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION = 0.005						# Max emigration per week is clamped to this fraction of a state's population
+	MIGRATION_MAX_PER_STATE_UNEMPLOYMENT_ORIGIN_FRACTION = 0.05					# The amount of unemployed workers in a state * this value is added to how many people can move from it (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
+	MIGRATION_MAX_PER_STATE_UNEMPLOYMENT_TARGET_FRACTION = 0.05					# The amount of unemployed workers in a state * this value is removed from how many people can move to it (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
+
+	# Migration Desire #
+	MIGRATION_DESIRE_BASE = 0													# Base desire to migrate
+	MIGRATION_DESIRE_FROM_DISCRIMINATION = 100									# Being discriminated will increase desire to migrate by this much
+	MIGRATION_DESIRE_FROM_JOB_SATISFACTION_FACTOR = -1.0						# A pop's desire to migrate will be affected by its job satisfaction multiplied by this value.
+
+	# Cultural Communities #
+	CULTURAL_COMMUNITY_LINGER_TIME_WEEKS = 3									# When the last pop of a given culture leaves a state, the corresponding cultural community will be removed after this long
+	CULTURAL_COMMUNITY_MAX_PER_MONTH_CHANCE = 0.04
+
+	# Slavery #
+	MIGRATION_MIN_POP_AMOUNT = 1												# No less than this amount of a pop can migrate each week (if any migration at all should happen)
+
+	# UX/UI Labeling #
+	MIGRATION_PULL_HIGH_THRESHOLD = 1.15	# 1.25								# State must have a migration pull of at least market average * this to get market immigration
+	MIGRATION_PULL_LOW_THRESHOLD = 0.85		# 0.75								# State must have a migration pull of less or equal than market average * this to get full amount of emigration
+
+## Migration Attraction ##
+	MIGRATION_PULL_EMPTY_STATE = 100											# If a state has no pops at all, give it a huge migration pull
+	MIGRATION_PULL_FROM_LIVING_STANDARD = 1.5	# 2								# Migration pull from each point of average living standard in target state
+	MIGRATION_PULL_FROM_AVAILABLE_EMPLOYMENT = 1	# 1.5						# Migration pull is increased by for each 10k available non subsistence jobs
+	MIGRATION_PULL_FROM_AVAILABLE_EMPLOYMENT_MAX = 30							# Migration pull from available non subsistence jobs cannot exceed this
+	MIGRATION_PULL_FROM_AVAILABLE_ARABLE_LAND_MAX_EMPLOYMENT_MULTIPLIER = 0.75	# Count available arable land as though the subsistence farm has only this fraction of its max employment, so that massive states in China with mostly full subsistence farms don't get a huge migration boost
+	MIGRATION_PULL_FROM_AVAILABLE_ARABLE_LAND_EMPLOYMENT = 0.75	# 0.5			# Migration pull is increased by for each 10k available subsistence jobs
+	MIGRATION_PULL_FROM_AVAILABLE_ARABLE_LAND_EMPLOYMENT_MAX = 30				# Migration pull from available subsistence jobs cannot exceed this
+	MIGRATION_PULL_REDUCTION_FROM_UNEMPLOYMENT = 1								# Migration pull is reduced by this for each 10k unemployed pops
+	MIGRATION_PULL_REDUCTION_FROM_UNEMPLOYMENT_MAX = 50							# Migration pull reduction from unemployment cannot exceed this
+
+## Market Migrations ##
+	# Market Migration Processing #
+	MARKET_MIGRATION_STATE_ATTRACTION_FRACTION = 0.75							# States with at least this fraction of the most attractive state's migration attraction will receive migration
+	MARKET_MIGRATION_PER_WEEK_FACTOR = 5										# This number of individuals will migrate for each point of difference in migration pull
+	MARKET_MIGRATION_PER_WEEK_PER_TOTAL_POPULATION = 100000						# Additionally, one more individual will migrate per this number of population for each point of difference in migration pull
+	MARKET_MIGRATION_MIN_DIFFERENCE_IN_MIGRATION_ATTRACTION_TO_MOVE = 5			# Pops will not migrate if their best option is to a state with a lower delta in migration pull than this number
+	MARKET_MIGRATION_MIN_POP_FRACTION_TO_MOVE = 0.05							# If the people wanting to migrate constitues less than this fraction of a pop, no new pop will be created and they won't migrate.
+	MIGRATION_PULL_MULT_FROM_NO_DISCRIMINATION = 0.5							# Migration pull multiplier increased by this if pop is moving from discrimination to no discrimination (not applied to mass migration targets)
+	MIGRATION_PULL_MULT_FROM_HOMELANDS = 0.2									# Migration pull multiplier increased by this if pop is moving to cultural homelands (not applied to mass migration targets)
+
+## Mass Migrations ##
+	# Mass Migration Setup #
+	MASS_MIGRATION_ORIGIN_MIN_TURMOIL = 0.1		#0.15							# Must have at least this much turmoil in cultural homelands to create a migration target
+	MASS_MIGRATION_ORIGIN_MIN_EMIGRANTS = 100000								# A country must have at least this many possible migrants to trigger a mass migration
+	MASS_MIGRATION_TARGET_MAX_TURMOIL = 0.30									# Must have this or less turmoil among the culture for a country to be picked as a mass migration target
+	MASS_MIGRATION_TARGET_MIN_ARABLE_LAND = 20									# A state must have at least this much arable land to be a mass migration target
+	MASS_MIGRATION_STATE_MIN_MARKET_ACCESS = 0.7								# A state must have at least this much market access to their market to be a mass migration target or origin state
+	MASS_MIGRATION_SPAWN_CHANCE = 2 											# Per week for each potential mass migration, scales with turmoil (1 = 1%)
+	MASS_MIGRATION_SPAWN_CHANCE_STRUGGLING_FACTOR = 0.2 						# Chance increases by this for each point of SoL below 10 for a culture in a country
+	MASS_MIGRATION_SPAWN_CHANCE_STARVING_FACTOR = 1 							# Chance increases by this for each point of SoL below 5 for a culture in a country (added on top of struggling factor)
+	MASS_MIGRATION_TARGET_COUNTRY_RANDOM_FACTOR = 0.5							# The higher this is, the more random the selection of mass migration country targets will be
+	MASS_MIGRATION_TARGET_STATE_RANDOM_FACTOR = 0.5								# The higher this is, the more random the selection of mass migration state targets in the target country will be
+	MASS_MIGRATION_DURATION_MONTHS = 6	# 12									# How long does a mass migration last in months
+	MASS_MIGRATION_COOLDOWN_MONTHS = 36	# 48									# How many months before the same culture can mass migrate from a country again
+	MASS_MIGRATION_NUM_TARGET_STATES_FOR_NO_PENALTY = 3	# 4						# Countries with at least this number of possible target states do not receive any penalty to their mass migration target score
+	MASS_MIGRATION_FEW_TARGET_STATES_PENALTY = 0.2								# Mass migration target score is reduced by a fraction of itself equal to this times number of possible target states less than MASS_MIGRATION_NUM_TARGET_STATES_FOR_NO_PENALTY. Or Score = Score - Score * this * PossibleStatesDiff
+
+	# Mass Migration Processing #
+	MASS_MIGRATION_PER_WEEK_FACTOR = 10											#
+	MASS_MIGRATION_PER_WEEK_PER_TOTAL_POPULATION = 100000						#
+	MASS_MIGRATION_MIN_DIFFERENCE_IN_MIGRATION_ATTRACTION_TO_MOVE = 10			#
+	# The below factors are applied *after* migration pull threshold checks, so they only impact how large a share of migration a state gets
+	MIGRATION_PULL_MULT_FROM_MASS_MIGRATION_TARGET = 1.5						# Migration pull multiplied by this from target state being a mass migration target
+	MIGRATION_PULL_MULT_FROM_MASS_MIGRATION_TARGET_ADJACENCY = 1.1				# Migration pull multiplied by this from target state being next to a mass migration target
+	MIGRATION_MAX_PER_STATE_MASS_EMIGRATION_MULT = 3.0							# Weekly emigration caps are multiplied by this amount by this for mass migrations (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
+	MIGRATION_MAX_PER_STATE_MASS_IMMIGRATION_MULT = 5.0						# Weekly immigration caps are multiplied by this amount by this for mass migrations (after clamping from MIGRATION_MAX_EMIGRATION_AS_POPULATION_FRACTION)
+	MASS_MIGRATION_NEIGHBORING_TARGET_STATE_LIMIT_FRACTION = 0.5				# Fraction of the limit a neighboring state gets compared to the main target state in a mass migration
+
+##### End Migration #####
+
+### Pop Growth Constants
+## Base Values per month
+@min_birthrate = 0.00055			# Minimum base birthrate per month (at POP_GROWTH_STABLE_SOL)
+@max_birthrate = 0.00450			# Maximum base birthrate per month (at SOL = 0 if not modified by malnourishment)
+@min_mortality = 0.00045			# Minimum base mortality per month (at POP_GROWTH_STABLE_SOL)
+@max_mortality = 0.00600			# Maximum base mortality per month (at SOL = 0 if not modified by malnourishment)
+
+## SoL Thresholds
+@pop_growth_equilibrium_sol = 5		# Equilibrium is pops stop starving and where growth first becomes positive
+@pop_growth_transition_sol = 10     # Transition determines how long birthrate "lags" behind mortality before starting to drop. Setting to same as equilibrium leads to no "lag" (only matters for birthrate)
+@pop_growth_max_sol = 25	# 20			# Growth Max is where net growth generally is at it's highest (only matters for mortality)
+@pop_growth_stable_sol = 35	# 30			# Stable is where birthrate and mortality stop changing and hit their minimum values
+
+## Others
+@transition_birthrate_mult = 1 		# If you want the birthrate "lag" to go to a higher or lower value than max_birthrate. (you can also just change it directly below)
+@max_growth_mortality_mult = 0.35	# What proportion of birthrate_at_growth_max mortality should be at. Higher means lower growth
+
+### Pop Growth Derived values
+# Generally, for each one of these derived values below we're really just doing one of three operations (or combination of them):
+# - Calculate a Point: sol * slope + start_value   					(x_at_y)
+# - Calculate a Slope: (start_value - end_value) / number_of_steps	(x_slope)
+# - Calculate an Intercept: -slope*sol + end_value					(x_intercept)
+# Intercepts are only needed for line segments that don't start at 0 SoL
+
+@birthrate_at_transition = @[max_birthrate*transition_birthrate_mult]
+@rate_at_equilibrium = @[pop_growth_equilibrium_sol*((birthrate_at_transition-max_birthrate)/pop_growth_transition_sol)+max_birthrate] # determines both mortality and birthrate
+
+## Mortality from 0 to pop_growth_equilibrium_sol
+@mortality_starving_slope = @[(rate_at_equilibrium-max_mortality)/pop_growth_equilibrium_sol]
+
+## Birthrate from 0 to pop_growth_transition_sol
+@birthrate_pretransition_slope = @[(birthrate_at_transition-rate_at_equilibrium)/pop_growth_transition_sol]
+
+## Mortality from pop_growth_equilibrium_sol to pop_growth_max_sol
+@birthrate_at_growth_max = @[(pop_growth_max_sol-pop_growth_transition_sol)*((min_birthrate-birthrate_at_transition)/(pop_growth_stable_sol-pop_growth_transition_sol))+birthrate_at_transition]
+@mortality_at_growth_max = @[birthrate_at_growth_max*max_growth_mortality_mult]
+@mortality_equilibrium_to_growth_max_slope = @[(mortality_at_growth_max-rate_at_equilibrium)/(pop_growth_max_sol-pop_growth_equilibrium_sol)]
+@mortality_equilibrium_to_growth_max_intercept = @[-mortality_equilibrium_to_growth_max_slope*pop_growth_equilibrium_sol+rate_at_equilibrium]
+
+## Birthrate from pop_growth_transition_sol to pop_growth_stable_sol
+@birthrate_transition_slope = @[(min_birthrate-birthrate_at_transition)/(pop_growth_stable_sol-pop_growth_transition_sol)]
+@birthrate_transition_intercept = @[-birthrate_transition_slope*pop_growth_stable_sol+min_birthrate]
+
+## Mortality from pop_growth_max_sol to pop_growth_stable_sol
+@mortality_growth_max_to_stable_slope = @[(min_mortality-mortality_at_growth_max)/(pop_growth_stable_sol-pop_growth_max_sol)]
+@mortality_growth_max_to_stable_intercept = @[-mortality_growth_max_to_stable_slope*pop_growth_stable_sol+min_mortality]
+
+### Pseudo algorithm to determine base Mortality / Birthrate
+## Mortality
+# if (sol < POP_GROWTH_EQUILIBRIUM_SOL)
+# { mortality = sol * POP_GROWTH_MORTALITY_STARVING_SLOPE + POP_GROWTH_MAX_MORTALITY }
+# else if (sol < POP_GROWTH_MAX_SOL)
+# { mortality = sol * POP_GROWTH_MORTALITY_EQUILIBRIUM_TO_GROWTH_MAX_SLOPE + POP_GROWTH_MORTALITY_EQUILIBRIUM_TO_GROWTH_MAX_INTERCEPT }
+# else if (sol < POP_GROWTH_STABLE_SOL)
+# { mortality = sol * POP_GROWTH_MORTALITY_GROWTH_MAX_TO_STABLE_SLOPE + POP_GROWTH_MORTALITY_GROWTH_MAX_TO_STABLE_INTERCEPT }
+# else { mortality = POP_GROWTH_MIN_MORTALITY }
+
+## Birthrate
+# if (sol < POP_GROWTH_EQUILIBRIUM_SOL)
+# { birthrate = (sol * POP_GROWTH_BIRTHRATE_PRETRANSITION_SLOPE + POP_GROWTH_MAX_BIRTHRATE) * (1 - malnourishment * (POP_GROWTH_EQUILIBRIUM_SOL - sol)) }
+# else if (sol < POP_GROWTH_TRANSITION_SOL)
+# { birthrate = sol * POP_GROWTH_BIRTHRATE_PRETRANSITION_SLOPE + POP_GROWTH_MAX_BIRTHRATE }
+# else if (sol < POP_GROWTH_STABLE_SOL)
+# { birthrate = sol * POP_GROWTH_BIRTHRATE_TRANSITION_SLOPE + POP_GROWTH_BIRTHRATE_TRANSITION_INTERCEPT }
+# else { birthrate = POP_GROWTH_MIN_BIRTHRATE }
+
+NPops = {
+	## Birthrate
+	POP_GROWTH_BIRTHRATE_PRETRANSITION_SLOPE = @birthrate_pretransition_slope
+	POP_GROWTH_BIRTHRATE_TRANSITION_SLOPE = @birthrate_transition_slope
+	POP_GROWTH_BIRTHRATE_TRANSITION_INTERCEPT = @birthrate_transition_intercept
+
+	## Mortality
+	POP_GROWTH_MORTALITY_STARVING_SLOPE = @mortality_starving_slope
+	POP_GROWTH_MORTALITY_EQUILIBRIUM_TO_GROWTH_MAX_SLOPE = @mortality_equilibrium_to_growth_max_slope
+	POP_GROWTH_MORTALITY_EQUILIBRIUM_TO_GROWTH_MAX_INTERCEPT = @mortality_equilibrium_to_growth_max_intercept
+	POP_GROWTH_MORTALITY_GROWTH_MAX_TO_STABLE_SLOPE = @mortality_growth_max_to_stable_slope
+	POP_GROWTH_MORTALITY_GROWTH_MAX_TO_STABLE_INTERCEPT = @mortality_growth_max_to_stable_intercept
+
+	## Base Values
+	POP_GROWTH_MIN_BIRTHRATE = @min_birthrate					# Minimum base birthrate per month (at POP_GROWTH_STABLE_SOL)
+	POP_GROWTH_MAX_BIRTHRATE = @max_birthrate					# Maximum base birthrate per month (at SOL = 0 if not modified by malnourishment)
+	POP_GROWTH_MIN_MORTALITY = @min_mortality					# Minimum base mortality per month (at POP_GROWTH_STABLE_SOL)
+	POP_GROWTH_MAX_MORTALITY = @max_mortality					# Maximum base mortality per month (at SOL = 0 if not modified by malnourishment)
+
+	## SoL Thresholds
+	POP_GROWTH_EQUILIBRIUM_SOL = @pop_growth_equilibrium_sol	# Equilibrium is pops stop starving and where growth first becomes positive
+	POP_GROWTH_TRANSITION_SOL = @pop_growth_transition_sol		# Transition determines how long birthrate "lags" behind mortality before starting to drop. Setting to same as equilibrium leads to no "lag" (only matters for birthrate)
+	POP_GROWTH_MAX_SOL = @pop_growth_max_sol					# Growth Max is where net growth generally is at it's highest (only matters for mortality)
+	POP_GROWTH_STABLE_SOL = @pop_growth_stable_sol				# Stable is where birthrate and mortality stop changing and hit their minimum values
+}
+### End Pop Growth Constant defines
+
+
 }
 
 NBattle = {	
@@ -93,11 +270,13 @@ NWar = {
 																																				 
 	STATE_CONQUEST_DEFAULT_RADICALIZATION = 0.4			# 0.5
 	STATE_CONQUEST_DEFAULT_DEMILITARIZATION = 0.6			# 0.75
+	WAR_EXHAUSTION_ANTI_WAR_LOBBY_CLOUT_FACTOR = 0.5	# 1.0 # At 100% lobby clout opposed to the war
+	WAR_EXHAUSTION_PRO_WAR_LOBBY_CLOUT_FACTOR = -0.5	# -1.0 # At 100% lobby clout supporting to the war
 }
 
 NPowerBlocs = {
 	MAX_PRINCIPLES = 6 # 4					# Max number of principles that a Power Bloc can have
-	INITIAL_PRINCIPLE_LEVELS = 1		# Max total levels of principles that a Power Bloc can have during formation
+	INITIAL_PRINCIPLE_LEVELS = 2	# 1		# Max total levels of principles that a Power Bloc can have during formation
 	FORMATION_COOLDOWN_MONTHS = 24		# Cooldown in months between the attempts to form Power Blocs
 	JOIN_COOLDOWN_MONTHS = 6			# If a Country leaves a Power Bloc they cannot re-join before X months
 	LEAVE_COOLDOWN_MONTHS = 6			# If a Country joins a Power Bloc they cannot leave within X months
