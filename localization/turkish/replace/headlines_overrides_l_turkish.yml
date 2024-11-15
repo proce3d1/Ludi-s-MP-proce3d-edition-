@@ -1,0 +1,21 @@
+﻿l_turkish:
+
+ notification_victoria_notification_tooltip:0 "#header $notification_victoria_notification_name$#!\n$TOOLTIP_DELIMITER$\n$notification_victoria_notification_desc$"
+ notification_victoria_notification_name:0 "#b Hannover, Birleşik Krallık'tan Ayrıldı #!"
+ notification_victoria_notification_desc:0 "Kral IV. William'ın ölümüyle, [concept_personal_union] ve [SCOPE.sCountry('britain_victoria_country_scope').GetName] [SCOPE.sCountry('hannover_victoria_scope').GetName] arasındaki birlik son buldu."
+
+ notification_opium_wars_british_response_angry_name:0 "#b Çin, Afyonu Yasakladı #!"
+ notification_opium_wars_british_response_angry_desc:0 "[SCOPE.sCountry('opium_wars_aggressor_country').GetName], [SCOPE.sCountry('opium_wars_target_country').GetAdjectiveNoFormatting] tarafından uygulanan afyon yasağına öfkeyle yanıt verdi ve [SCOPE.sCountry('opium_wars_target_country').GetName] hükümetine karşı birçok tehditte bulundu."
+
+ notification_opium_wars_british_response_passive_name:0 "#b Çin, Afyonu Yasakladı #!"
+ notification_opium_wars_british_response_passive_desc:0 "[SCOPE.sCountry('opium_wars_aggressor_country').GetName] görünüşe göre [SCOPE.sCountry('opium_wars_target_country').GetAdjectiveNoFormatting] afyon yasağını görmezden geliyor."
+ notification_opium_wars_british_response_passive_tooltip:1 "#header $notification_opium_wars_british_response_passive_name$#!\n$TOOLTIP_DELIMITER$\n$notification_opium_wars_british_response_passive_desc$"
+
+ notification_santa_anna_captured_notification_name:0 "#b Santa Anna Yakalandı #!"
+ notification_santa_anna_captured_notification_desc:0 "[SCOPE.sCountry('texas_scope').GetName], [SCOPE.sCountry('mexico_scope').GetAdjective] General Santa Anna'yı yakaladı. Santa Anna, kişisel gücünü kullanarak Teksas Bağımsızlık Savaşı'nı sona erdirmek için müzakere etti."
+ notification_santa_anna_captured_notification_tooltip:0 "#header $santa_anna_captured_notification_name$#!\n$TOOLTIP_DELIMITER$\n$santa_anna_captured_notification_desc$"
+
+  notification_brz_isabel_accession_name: "#b Dom Pedro Öldü #!"
+  notification_brz_isabel_accession_desc: "Brezilya İmparatoru II. Pedro vefat etti ve [SCOPE.sCountry('brazil_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('brazil_scope').GetRuler.GetFullName] onun yerine tahta geçti."
+  notification_brz_isabel_accession_tooltip: "#header $notification_brz_isabel_accession_name$#!\n$TOOLTIP_DELIMITER$\n$notification_brz_isabel_accession_desc$"
+

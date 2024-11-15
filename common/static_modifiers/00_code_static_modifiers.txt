@@ -37,15 +37,15 @@ base_values = {
 	
 	state_farmers_investment_pool_contribution_add = 0.05
 	state_shopkeepers_investment_pool_contribution_add = 0.05
-	state_clergymen_investment_pool_contribution_add = 0.20
-	state_aristocrats_investment_pool_contribution_add = 0.20
-	state_capitalists_investment_pool_contribution_add = 0.30
+	state_clergymen_investment_pool_contribution_add = 0.15		# 0.20
+	state_aristocrats_investment_pool_contribution_add = 0.15	# 0.20
+	state_capitalists_investment_pool_contribution_add = 0.20	# 0.30
 	
 	# To balance for unincorporated states not paying taxes
 	state_unincorporated_starting_wages_mult = -0.20
 	building_unincorporated_subsistence_output_mult = -0.20
 		
-	country_construction_add = 20	# 10
+	country_construction_add = 10	# added more in country ranks
 	
 	building_mobilization_cost_mult = 0.6
 	
@@ -777,7 +777,7 @@ forced_regime_change = {
 
 weak_power_bloc = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
-	power_bloc_cohesion_mult = -0.5
+	# power_bloc_cohesion_mult = -0.5
 }
 
 power_bloc_no_primary_principles = {
