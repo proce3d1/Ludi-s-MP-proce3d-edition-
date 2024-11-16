@@ -52,5 +52,9 @@
 		}
 
 		add_journal_entry = { type = je_terakoya }
+
+		add_modifier = {
+			name = jap_mapi
+		}
 	}
 }

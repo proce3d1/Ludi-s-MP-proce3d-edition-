@@ -385,7 +385,7 @@
 		region_state:DEI = {
 			create_pop = {
 				culture = javan
-				size = 3432000
+				size = 3932000
 			}
 			create_pop = {
 				culture = yue

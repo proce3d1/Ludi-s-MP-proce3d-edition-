@@ -38,6 +38,9 @@ law_regulatory_bodies = {
 	}
 
 	institution = institution_workplace_safety
+	institution_modifier = {
+		state_working_adult_ratio_add = 0.01 " New
+	}
 	
 	possible_political_movements = {
 		law_worker_protections
@@ -91,7 +94,7 @@ law_worker_protections = {
 	institution = institution_workplace_safety
 	institution_modifier = {
 		building_minimum_wage_mult = 0.15
-		state_working_adult_ratio_add = 0.01
+		state_working_adult_ratio_add = 0.03  # 0.01
 	}
 
 	

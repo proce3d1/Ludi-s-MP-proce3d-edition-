@@ -979,7 +979,7 @@
 		region_state:ADG = {
 			create_pop = {
 				culture = songhai
-				size = 14000
+				size = 64000
 			}
 			create_pop = {
 				pop_type = slaves
@@ -1003,7 +1003,7 @@
 		region_state:MSN = {
 			create_pop = {
 				culture = songhai
-				size = 140000
+				size = 190000
 			}
 			create_pop = {
 				culture = mande

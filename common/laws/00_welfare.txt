@@ -43,6 +43,7 @@ law_poor_laws = {
 	institution = institution_social_security
 	institution_modifier = {
 		state_political_strength_from_welfare_mult = -0.15
+		state_birth_rate_mult = 0.01 # New
 	}
 	
 	possible_political_movements = {
@@ -89,6 +90,9 @@ law_wage_subsidies = {
 	}
 
 	institution = institution_social_security
+	institution_modifier = {
+		state_birth_rate_mult = 0.015 # New
+	}
 	
 	possible_political_movements = {
 		law_old_age_pension
@@ -142,7 +146,8 @@ law_old_age_pension = {
 	institution = institution_social_security
 	institution_modifier = {
 		state_dependent_wage_mult = 0.2
-		state_working_adult_ratio_add = -0.01
+		state_birth_rate_mult = 0.02 # New
+		# state_working_adult_ratio_add = -0.01
 		state_dependent_political_participation_add = 0.02
 	}
 	
