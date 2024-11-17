@@ -39,7 +39,7 @@ law_regulatory_bodies = {
 
 	institution = institution_workplace_safety
 	institution_modifier = {
-		state_working_adult_ratio_add = 0.01 " New
+		state_working_adult_ratio_add = 0.01 # New
 	}
 	
 	possible_political_movements = {
