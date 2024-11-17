@@ -1,0 +1,81 @@
+﻿#
+# Automation logic
+# 1K Labourers = 1 Coal / 1 Iron / 1 Tool / 1 Engine / 5 Transportation / 0.5 Electricity / 0.5 Oil
+#
+pm_automation_disabled = {
+	texture = "gfx/interface/icons/production_method_icons/no_automation.dds"
+	is_default = yes
+}
+
+pm_watertube_boiler = {
+	texture = "gfx/interface/icons/production_method_icons/watertube_boiler.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 5
+		}
+	}
+	unlocking_technologies = {
+		watertube_boiler
+	}
+	disallowing_laws = {
+		law_industry_banned
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_coal_add = 1.5
+		}
+		level_scaled = {
+			building_employment_laborers_add = -1500
+		}
+	}
+}
+
+pm_rotary_valve_engine = {
+	texture = "gfx/interface/icons/production_method_icons/rotary_valve_engine.dds"
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	unlocking_technologies = {
+		rotary_valve_engine
+	}
+	disallowing_laws = {
+		law_industry_banned
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_tools_add = 1
+			goods_input_coal_add = 1
+		}
+		level_scaled = {
+			building_employment_laborers_add = -2000
+		}
+	}
+}
+
+pm_assembly_lines = {
+	texture = "gfx/interface/icons/production_method_icons/assembly_lines.dds"
+	unlocking_technologies = {
+		conveyors
+	}
+	disallowing_laws = {
+		law_industry_banned
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_tools_add = 1
+			goods_input_electricity_add = 1
+		}
+		level_scaled = {
+			building_employment_laborers_add = -3000
+		}
+	}
+	required_input_goods = electricity
+}
+

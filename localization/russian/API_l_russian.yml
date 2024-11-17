@@ -1,0 +1,46 @@
+﻿l_russian:
+    # Modifiers
+    API_granted_leadership: "Авторитет использован, чтобы сделать лидером"
+    API_granted_command:    "Авторитет использован, чтобы передать командование"
+    API_exiled_agitator:    "Авторитет использован, чтобы изгнать диссидента"
+    API_invited_agitator:   "Авторитет использован, чтобы пригласить изгнанника"
+    API_arranged_accident:  "Authority Exercised for Assassination"
+    API_authority_cost:     "Авторитет использован"
+    
+    API_bolstering_career:  "Поддержать карьеру персонажа"
+    API_suppressing_career: "Помешать карьере персонажа"
+    API_bolstered_career:   "Карьера поддержана"
+    API_suppressed_career:  "Карьера пресечена"
+    
+    # Modifier Types
+    country_api_authority_add:      "$country_authority_add$ после всех множителей"
+    country_api_authority_add_desc: "$country_authority_add_desc$\n\n$API_authority_desc_ext$"
+    API_authority_desc_ext: "Отображаемое здесь значение не применяется непосредственно к @aut![Nbsp][concept_authority], но вместо этого используется для расчета значения модификатора #bold $API_authority_cost$#!. Модификатор #bold $API_authority_cost$#! будет содержать значение, примененное к базовому, неизмененному @aut![Nbsp][concept_authority] чтобы получить правильную стоимость @aut![Nbsp][concept_authority] указанную этим модификатором, примененным к [concept_country] после применения любых множителей к @aut![Nbsp][concept_authority]."
+    
+    # Character Interactions
+    API_bolster_character:    "Поддержать карьеру"
+    API_unbolster_character:  "Прекратить поддержку"
+    API_suppress_character:   "Помешать карьере"
+    API_unsuppress_character: "Прекратить помехи"
+    
+    # Tooltips
+    API_tt_character_not_bolstered:  "[Character.GetCustom('GetUniversalFullName')] не получает поддержку своей карьеры"
+    API_tt_character_not_suppressed: "[Character.GetCustom('GetUniversalFullName')] не подвергается помехам своей карьере"
+    
+    API_tt_character_bolstered:       "[Character.GetCustom('GetUniversalFullName')] получает #p 0.25#! [concept_popularity] каждую неделю"
+    API_tt_country_bolster_character: "Стоимость: #v 25#! $country_authority_add$"
+    
+    API_tt_character_unbolstered:       "[Character.GetCustom('GetUniversalFullName')] #n прекращает получать #! #v 0.25#! [concept_popularity] каждую неделю"
+    API_tt_country_unbolster_character: "Вернуть: #v 25#! $country_authority_add$"
+    
+    API_tt_character_suppressed:       "[Character.GetCustom('GetUniversalFullName')] теряет #n 0.25#! [concept_popularity] каждую неделю"
+    API_tt_country_suppress_character: "$API_tt_country_bolster_character$"
+    
+    API_tt_character_unsuppressed:       "[Character.GetCustom('GetUniversalFullName')] #p прекращает терять #! #v 0.25#! [concept_popularity] каждую неделю"
+    API_tt_country_unsuppress_character: "$API_tt_country_unbolster_character$"
+    
+    API_tt_not_at_bolster_cap:  "[Character.GetCustom('GetUniversalFullName')] не получил #p 100#! [concept_popularity] благодаря поддержке"
+    API_tt_not_at_suppress_cap: "[Character.GetCustom('GetUniversalFullName')] не потерял #n -100#! [concept_popularity] из-за помех"
+    
+    API_tt_bolster_autostop:  "Это действие автоматически отменится, когда [Character.GetCustom('GetUniversalFullName')] достигнет #p 100#! [concept_popularity]"
+    API_tt_suppress_autostop: "Это действие автоматически отменится, когда [Character.GetCustom('GetUniversalFullName')] достигнет #n -100#! [concept_popularity]"

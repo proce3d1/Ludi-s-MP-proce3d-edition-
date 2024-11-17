@@ -10,6 +10,7 @@
 	
 	production_method_groups = {
 		pmg_base_building_synthetic_oil_plants
+		pmg_automation_building_chemical_industry
 	}
 	
 	required_construction = construction_cost_high
@@ -29,6 +30,7 @@ building_synthetic_rubber_plants = {
 	
 	production_method_groups = {
 		pmg_base_building_synthetic_rubber_plants
+		pmg_automation_building_chemical_industry
 	}
 	
 	required_construction = construction_cost_high

@@ -1,0 +1,60 @@
+﻿# Apparently JEs don't show up if they weren't there when the game first started, so I'm going to rig up this thing to
+# force-start the JE somewhere if the mod is added mid-game
+API_de_driver_starter = {
+    is_shown = {
+        game_date >= 1836.1.15
+        NOT = {
+            is_country_type = decentralized
+        }
+        OR = { # If a new country forms the JE may be able to self-start through it; need to account for cases where
+            has_global_variable = API_je_started_by_dec # said new country disappears later
+            NOT = {
+                has_global_variable = API_je_started_by_self
+            }
+        }
+        OR = {
+            is_ai = yes
+            NOT = { # Human players eligible only if they conquered all the AIs
+                any_country = {
+                    is_ai = yes
+                }
+            }
+        }
+        OR = {
+            AND = {
+                has_global_variable = API_main_holder
+                OR = {
+                    NOT = {
+                        exists = global_var:API_main_holder
+                    }
+                    global_var:API_main_holder ?= this
+                    global_var:API_main_holder ?= {
+                        OR = {
+                            is_country_alive = no
+                            AND = {
+                                is_ai = no
+                                any_country = {
+                                    is_ai = yes
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            NOT = {
+                has_global_variable = API_main_holder
+            }
+        }
+    }
+    
+    when_taken = {
+        add_journal_entry = {
+            type = API_je_main
+        }
+        set_global_variable = API_je_started_by_dec
+    }
+    
+    ai_chance = {
+        base = 1000000
+    }
+}

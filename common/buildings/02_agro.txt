@@ -16,6 +16,7 @@ building_rye_farm = {
 		pmg_base_building_rye_farm
 		pmg_secondary_building_rye_farm
 		pmg_harvesting_process_building_rye_farm
+		pmg_transportation_farms
 	}
 
 	required_construction = construction_cost_low
@@ -42,6 +43,7 @@ building_wheat_farm = {
 		pmg_base_building_wheat_farm
 		pmg_secondary_building_wheat_farm
 		pmg_harvesting_process_building_wheat_farm
+		pmg_transportation_farms
 	}
 
 	required_construction = construction_cost_low
@@ -68,6 +70,7 @@ building_rice_farm = {
 		pmg_base_building_rice_farm
 		pmg_secondary_building_rice_farm
 		pmg_harvesting_process_building_rice_farm
+		pmg_transportation_farms
 	}
 
 	required_construction = construction_cost_low
@@ -94,6 +97,7 @@ building_maize_farm = {
 		pmg_base_building_maize_farm
 		pmg_secondary_building_maize_farm
 		pmg_harvesting_process_building_maize_farm
+		pmg_transportation_farms
 	}
 
 	required_construction = construction_cost_low
@@ -120,6 +124,7 @@ building_millet_farm = {
 		pmg_base_building_millet_farm
 		pmg_secondary_building_millet_farm
 		pmg_harvesting_process_building_millet_farm
+		pmg_transportation_farms
 	}
 
 	required_construction = construction_cost_low
