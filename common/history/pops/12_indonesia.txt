@@ -101,7 +101,7 @@
 		region_state:BRU = {
 			create_pop = {
 				culture = dayak
-				size = 75000
+				size = 95000
 			}
 			create_pop = {
 				culture = dayak
@@ -125,7 +125,7 @@
 		region_state:SUL = {
 			create_pop = {
 				culture = dayak
-				size = 14000
+				size = 54000
 			}
 			create_pop = {
 				culture = moro
@@ -153,7 +153,7 @@
 		region_state:BLG = {
 			create_pop = {
 				culture = dayak
-				size = 7000
+				size = 10000
 			}
 			create_pop = {
 				pop_type = slaves
@@ -175,7 +175,7 @@
 		region_state:LAN = {
 			create_pop = {
 				culture = bornean
-				size = 32000
+				size = 52000
 			}
 			create_pop = {
 				culture = dayak
@@ -194,7 +194,7 @@
 		region_state:DEI = {
 			create_pop = {
 				culture = bornean
-				size = 39660
+				size = 339660
 			}
 			create_pop = {
 				pop_type = slaves
@@ -219,7 +219,7 @@
 		region_state:SMB = {
 			create_pop = {
 				culture = bornean
-				size = 60000
+				size = 120000
 			}
 			create_pop = {
 				pop_type = slaves
@@ -243,7 +243,7 @@
 		region_state:PON = {
 			create_pop = {
 				culture = bornean
-				size = 78000
+				size = 108000
 			}
 			create_pop = {
 				pop_type = slaves
@@ -508,7 +508,7 @@
 		region_state:DEI = {
 			create_pop = {
 				culture = sumatran
-				size = 130123
+				size = 330123
 			}
 			create_pop = {
 				pop_type = slaves
@@ -517,7 +517,7 @@
 			}
 			create_pop = {
 				culture = dutch
-				size = 800
+				size = 25800
 			}
 			create_pop = {
 				culture = batak
@@ -591,7 +591,7 @@
 		region_state:DEI = {
 			create_pop = {
 				culture = sumatran
-				size = 90122
+				size = 190122
 			}
 			create_pop = {
 				pop_type = slaves
@@ -600,7 +600,7 @@
 			}
 			create_pop = {
 				culture = dutch
-				size = 300
+				size = 20300
 			}
 			create_pop = {
 				culture = batak

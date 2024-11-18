@@ -228,7 +228,7 @@
 		region_state:SIL = {
 			create_pop = {
 				culture = afro_caribbean
-				size = 38000
+				size = 538000
 			}
 			create_pop = {
 				culture = kissi
@@ -330,7 +330,7 @@
 			}
 			create_pop = {
 				culture = afro_american
-				size = 58996
+				size = 558996
 			}
 			create_pop = {
 				culture = kru
@@ -493,7 +493,7 @@
 			
 			create_pop = {
 				culture = fulbe
-				size = 398600
+				size = 698600
 			}
 			create_pop = {
 				culture = hausa
@@ -505,7 +505,7 @@
 		region_state:SOK = {
 			create_pop = {
 				culture = hausa
-				size = 1660202
+				size = 2660202
 			}
 			create_pop = {
 				culture = fulbe
@@ -998,7 +998,7 @@
 		region_state:HAR = {
 			create_pop = {
 				culture = amhara
-				size = 99636
+				size = 199636
 			}
 			create_pop = {
 				culture = oromo
@@ -1018,7 +1018,7 @@
 		region_state:SHW = {
 			create_pop = {
 				culture = amhara
-				size = 252360
+				size = 452360
 			}
 			create_pop = {
 				culture = oromo
@@ -1040,16 +1040,16 @@
 		region_state:WLG = {
 			create_pop = {
 				culture = amhara
-				size = 90000
+				size = 130000
 			}
 			create_pop = {
 				culture = oromo
-				size = 120004
+				size = 190004
 			}
 			create_pop = {
 				culture = oromo
 				religion = animist
-				size = 145600
+				size = 205600
 			}
 			create_pop = {
 				pop_type = slaves
@@ -1069,14 +1069,14 @@
 			create_pop = {
 				culture = oromo
 				religion = animist
-				size = 132396
+				size = 152396
 			}
 		}
 		region_state:BRN = {
 			create_pop = {
 				culture = oromo
 				religion = animist
-				size = 140000
+				size = 190000
 			}
 			create_pop = {
 				culture = sidama
@@ -1084,7 +1084,7 @@
 			}
 			create_pop = {
 				culture = oromo
-				size = 200000
+				size = 250000
 			}
 			create_pop = {
 				culture = kikuyu
@@ -1754,7 +1754,7 @@
 		region_state:FNG = {
 			create_pop = {
 				culture = fang
-				size = 388000
+				size = 588000
 			}
 			create_pop = {
 				culture = equatorial_bantu
@@ -1774,7 +1774,7 @@
 		region_state:DLA = {
 			create_pop = {
 				culture = equatorial_bantu
-				size = 600000
+				size = 1000000
 			}
 			create_pop = {
 				pop_type = slaves
@@ -1787,7 +1787,7 @@
 		region_state:DAK = {
 			create_pop = {
 				culture = equatorial_bantu
-				size = 283400
+				size = 1283400
 			}
 			create_pop = {
 				culture = fur
@@ -1811,7 +1811,7 @@
 			}
 			create_pop = {
 				culture = azande
-				size = 28000
+				size = 58000
 			}
 			create_pop = {
 				pop_type = slaves
@@ -1933,7 +1933,7 @@
 		region_state:KBA = {
 			create_pop = {
 				culture = fluvian_bantu
-				size = 720000
+				size = 920000
 			}
 			create_pop = {
 				culture = lunda
@@ -1953,11 +1953,11 @@
 		region_state:LBA = {
 			create_pop = {
 				culture = luba
-				size = 120000
+				size = 220000
 			}
 			create_pop = {
 				culture = fluvian_bantu
-				size = 342000
+				size = 442000
 			}
 			create_pop = {
 				pop_type = slaves
@@ -2168,7 +2168,7 @@
 		region_state:KZM = {
 			create_pop = {
 				culture = lunda
-				size = 120400
+				size = 320400
 			}
 			create_pop = {
 				culture = fluvian_bantu
@@ -2183,7 +2183,7 @@
 		region_state:LND = {
 			create_pop = {
 				culture = lunda
-				size = 268400
+				size = 768400
 			}
 			create_pop = {
 				pop_type = slaves
@@ -2429,7 +2429,7 @@
 		region_state:NAM = {
 			create_pop = {
 				culture = khoisan
-				size = 56000
+				size = 556000
 			}
 			create_pop = {
 				culture = tswana
@@ -2446,7 +2446,7 @@
 		region_state:HRO = {
 			create_pop = {
 				culture = herero
-				size = 83996
+				size = 483996
 			}
 			create_pop = {
 				culture = lunda
@@ -2514,7 +2514,7 @@
 			
 			create_pop = {
 				culture = boer
-				size = 1432200
+				size = 2332200
 			}
 		}
 	}

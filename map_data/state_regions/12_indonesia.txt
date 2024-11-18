@@ -33,7 +33,7 @@ STATE_NORTH_BORNEO = {
     farm = "x91B40F"
     mine = "xC0B7FD"
     wood = "xC65120"
-    arable_land = 20
+    arable_land = 40
     arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_banana_plantations" }
     capped_resources = {
         bg_iron_mining = 24
@@ -206,7 +206,7 @@ STATE_NORTH_SUMATRA = {
     farm = "x87F7B6"
     mine = "x8B7A14"
     wood = "xD3A66E"
-    arable_land = 60
+    arable_land = 120
     arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
     capped_resources = {
         bg_coal_mining = 40
@@ -230,7 +230,7 @@ STATE_SOUTH_SUMATRA = {
     farm = "x27FD1C"
     mine = "x0D0BEB"
     wood = "xDBE794"
-    arable_land = 40
+    arable_land = 110
     arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
     capped_resources = {
         bg_coal_mining = 40
@@ -244,7 +244,7 @@ STATE_SOUTH_SUMATRA = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 10
+        undiscovered_amount = 30
     }
     naval_exit_id = 3120
 }

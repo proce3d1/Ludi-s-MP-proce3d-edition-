@@ -188,7 +188,7 @@
 		region_state:EGY = {
 			create_pop = {
 				culture = misri
-				size = 8012
+				size = 78012
 			}
 			create_pop = {
 				culture = mashriqi
@@ -196,7 +196,7 @@
 			}
 			create_pop = {
 				culture = bedouin
-				size = 11120
+				size = 111120
 			}
 			create_pop = {
 				culture = misri
@@ -214,7 +214,7 @@
 		region_state:EGY = {
 			create_pop = {
 				culture = tigray
-				size = 75764
+				size = 275764
 			}
 			create_pop = {
 				culture = misri
@@ -691,11 +691,11 @@
 		region_state:TRI = {
 			create_pop = {
 				culture = maghrebi
-				size = 169628
+				size = 369628
 			}
 			create_pop = {
 				culture = bedouin
-				size = 283796
+				size = 583796
 			}
 			create_pop = {
 				culture = sephardic
@@ -716,15 +716,15 @@
 		region_state:TRI = {
 			create_pop = {
 				culture = bedouin
-				size = 171604
+				size = 471604
 			}
 			create_pop = {
 				culture = berber
-				size = 60000
+				size = 120000
 			}
 			create_pop = {
 				culture = maghrebi
-				size = 173132
+				size = 473132
 			}
 			create_pop = {
 				culture = sephardic
