@@ -15,15 +15,15 @@
 		region_state:KNG = {
 			create_pop = {
 				culture = akan
-				size = 52004
+				size = 152004
 			}
 			create_pop = {
 				culture = senufo
-				size = 96000
+				size = 196000
 			}
 			create_pop = {
 				culture = dyula
-				size = 64004
+				size = 164004
 			}
 			create_pop = {
 				pop_type = slaves
@@ -34,7 +34,7 @@
 		region_state:AYI = {
 			create_pop = {
 				culture = akan
-				size = 79200
+				size = 179200
 			}
 			create_pop = {
 				pop_type = slaves
@@ -47,7 +47,7 @@
 		region_state:KBD = {
 			create_pop = {
 				culture = mande
-				size = 70000
+				size = 100000
 			}
 			create_pop = {
 				culture = dyula
@@ -67,7 +67,7 @@
 		region_state:BLE = {
 			create_pop = {
 				culture = akan
-				size = 99996
+				size = 139996
 			}
 			create_pop = {
 				culture = mande
@@ -82,7 +82,7 @@
 		region_state:KRU = {
 			create_pop = {
 				culture = kru
-				size = 215004
+				size = 255004
 			}
 			create_pop = {
 				pop_type = slaves
@@ -588,7 +588,7 @@
 		region_state:GBR = {
 			create_pop = {
 				culture = akan
-				size = 40204
+				size = 90204
 			}
 			create_pop = {
 				culture = mossi
@@ -602,7 +602,7 @@
 		region_state:NET = {
 			create_pop = {
 				culture = akan
-				size = 45572
+				size = 75572
 			}
 			create_pop = {
 				culture = mossi
@@ -612,7 +612,7 @@
 		region_state:ASH = {
 			create_pop = {
 				culture = akan
-				size = 436308
+				size = 1036308
 			}
 			create_pop = {
 				culture = mossi
@@ -633,7 +633,7 @@
 		region_state:DEN = {
 			create_pop = {
 				culture = akan
-				size = 116308
+				size = 316308
 			}
 			create_pop = {
 				culture = ewe
@@ -651,7 +651,7 @@
 			}
 			create_pop = {
 				culture = akan
-				size = 448000
+				size = 748000
 			}
 			create_pop = {
 				culture = fulbe
@@ -670,7 +670,7 @@
 		region_state:EWE = {
 			create_pop = {
 				culture = ewe
-				size = 355996
+				size = 455996
 			}
 			create_pop = {
 				pop_type = slaves
